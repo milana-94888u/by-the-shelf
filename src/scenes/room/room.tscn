@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx8gwlfthou1c"]
+
+[ext_resource type="PackedScene" uid="uid://dk57ntjj2h1ug" path="res://src/scenes/items/item.tscn" id="1_7pd75"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1iggs"]
+resource_local_to_scene = true
+
+[node name="Room" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Item" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(392, 140)
+
+[node name="CollisionShape2D" parent="Item" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[editable path="Item"]

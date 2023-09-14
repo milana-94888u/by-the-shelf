@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk57ntjj2h1ug"]
+
+[ext_resource type="Script" path="res://src/scenes/items/item.gd" id="1_3r527"]
+
+[node name="Item" type="Area2D"]
+collision_mask = 0
+monitoring = false
+monitorable = false
+script = ExtResource("1_3r527")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
