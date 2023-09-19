@@ -1,18 +1,207 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx8gwlfthou1c"]
+[gd_scene load_steps=22 format=3 uid="uid://cx8gwlfthou1c"]
 
 [ext_resource type="PackedScene" uid="uid://dk57ntjj2h1ug" path="res://src/scenes/items/item.tscn" id="1_7pd75"]
+[ext_resource type="Texture2D" uid="uid://dqxvhrtnhn7xv" path="res://src/scenes/room/front shelf.png" id="1_62a16"]
+[ext_resource type="Texture2D" uid="uid://d1pqmje4mbey5" path="res://src/scenes/room/background.png" id="2_wsbab"]
+[ext_resource type="Texture2D" uid="uid://bung5hx8myuo5" path="res://src/scenes/room/Adventurer corner.png" id="4_qt4xp"]
+[ext_resource type="Texture2D" uid="uid://buy0qvaws43oo" path="res://src/scenes/room/Posters.png" id="5_4iomi"]
+[ext_resource type="Texture2D" uid="uid://bga4ua58s2s3k" path="res://src/scenes/room/Garbage Princess figure.png" id="6_jvqov"]
+[ext_resource type="Texture2D" uid="uid://dwiqy42smajtp" path="res://src/scenes/room/Fate 2 Books.png" id="7_hrbnr"]
+[ext_resource type="Texture2D" uid="uid://b5rqdax38t8bu" path="res://src/scenes/room/Record player.png" id="8_p0674"]
+[ext_resource type="Texture2D" uid="uid://ujqc1gkhutlc" path="res://src/scenes/room/Egg plushie.png" id="9_hl2dy"]
+[ext_resource type="Texture2D" uid="uid://oqms50nxqnin" path="res://src/scenes/room/Playbox games.png" id="10_6c4o3"]
+[ext_resource type="Texture2D" uid="uid://dm2ujbh3ccd7v" path="res://src/scenes/room/Adventurer figure.png" id="11_qslsa"]
+[ext_resource type="Texture2D" uid="uid://b3gy6wo24vnm" path="res://src/scenes/room/Friend and Miss Ern figure.png" id="12_n3obw"]
+[ext_resource type="Texture2D" uid="uid://dt21lea08oqs" path="res://src/scenes/room/Gun from Fate 2.png" id="13_165e6"]
+[ext_resource type="Texture2D" uid="uid://hlpiu72yl4mo" path="res://src/scenes/room/MnM books.png" id="14_pwkc4"]
+[ext_resource type="Texture2D" uid="uid://bi6nsfdiniw6o" path="res://src/scenes/room/Eli's gamepad.png" id="15_p11xh"]
+[ext_resource type="Texture2D" uid="uid://caic47vjfcseb" path="res://src/scenes/room/Eli and Sam photo.png" id="16_fn1n2"]
+[ext_resource type="Texture2D" uid="uid://b5xlxkvsnj21y" path="res://src/scenes/room/Lamas.png" id="17_tyy2e"]
+[ext_resource type="Texture2D" uid="uid://6a7rcisyqrbj" path="res://src/scenes/room/Old Playbox.png" id="18_etjxw"]
+[ext_resource type="Texture2D" uid="uid://dmlr5wx3nqsrd" path="res://src/scenes/room/Reap Owl plushy.png" id="19_g7kk6"]
+[ext_resource type="Texture2D" uid="uid://duuebwwefhpvg" path="res://src/scenes/room/Records.png" id="20_xbvom"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1iggs"]
 resource_local_to_scene = true
 
 [node name="Room" type="Node2D"]
 
+[node name="Front shelf" type="Sprite2D" parent="."]
+z_index = 10
+texture = ExtResource("1_62a16")
+
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("2_wsbab")
 
-[node name="Item" parent="." instance=ExtResource("1_7pd75")]
-position = Vector2(392, 140)
+[node name="Adventurer corner" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(23, -430)
 
-[node name="CollisionShape2D" parent="Item" index="1"]
+[node name="Sprite2D" parent="Adventurer corner" index="0"]
+texture = ExtResource("4_qt4xp")
+
+[node name="CollisionShape2D" parent="Adventurer corner" index="1"]
 shape = SubResource("CircleShape2D_1iggs")
 
-[editable path="Item"]
+[node name="Posters" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(-643, -292)
+
+[node name="Sprite2D" parent="Posters" index="0"]
+texture = ExtResource("5_4iomi")
+
+[node name="CollisionShape2D" parent="Posters" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Garbage Princess" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(-50, -292)
+
+[node name="Sprite2D" parent="Garbage Princess" index="0"]
+texture = ExtResource("6_jvqov")
+
+[node name="CollisionShape2D" parent="Garbage Princess" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Fate 2 books" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(-63, -143)
+
+[node name="Sprite2D" parent="Fate 2 books" index="0"]
+texture = ExtResource("7_hrbnr")
+
+[node name="CollisionShape2D" parent="Fate 2 books" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Record Player" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(-55, 23)
+
+[node name="Sprite2D" parent="Record Player" index="0"]
+texture = ExtResource("8_p0674")
+
+[node name="CollisionShape2D" parent="Record Player" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Egg Plushy" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(86, -19)
+
+[node name="Sprite2D" parent="Egg Plushy" index="0"]
+texture = ExtResource("9_hl2dy")
+
+[node name="CollisionShape2D" parent="Egg Plushy" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Playbox Games" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(254, 188)
+
+[node name="Sprite2D" parent="Playbox Games" index="0"]
+texture = ExtResource("10_6c4o3")
+
+[node name="CollisionShape2D" parent="Playbox Games" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Adventurer Figure" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(370, -286)
+
+[node name="Sprite2D" parent="Adventurer Figure" index="0"]
+texture = ExtResource("11_qslsa")
+
+[node name="CollisionShape2D" parent="Adventurer Figure" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Friend and Miss Ern figures" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(453, -291)
+
+[node name="Sprite2D" parent="Friend and Miss Ern figures" index="0"]
+texture = ExtResource("12_n3obw")
+
+[node name="CollisionShape2D" parent="Friend and Miss Ern figures" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Fate 2 Gun" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(480, -395)
+
+[node name="Sprite2D" parent="Fate 2 Gun" index="0"]
+texture = ExtResource("13_165e6")
+
+[node name="CollisionShape2D" parent="Fate 2 Gun" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="M&M books" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(629, 78)
+
+[node name="Sprite2D" parent="M&M books" index="0"]
+texture = ExtResource("14_pwkc4")
+
+[node name="CollisionShape2D" parent="M&M books" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Eli\'s Gamepad" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(-115, 325)
+
+[node name="Sprite2D" parent="Eli\'s Gamepad" index="0"]
+texture = ExtResource("15_p11xh")
+
+[node name="CollisionShape2D" parent="Eli\'s Gamepad" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Eli and Sam photo" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(943, -95)
+
+[node name="Sprite2D" parent="Eli and Sam photo" index="0"]
+texture = ExtResource("16_fn1n2")
+
+[node name="CollisionShape2D" parent="Eli and Sam photo" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Lama plushies" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(1000, 108)
+
+[node name="Sprite2D" parent="Lama plushies" index="0"]
+texture = ExtResource("17_tyy2e")
+
+[node name="CollisionShape2D" parent="Lama plushies" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Old Playbox" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(633, 259)
+
+[node name="Sprite2D" parent="Old Playbox" index="0"]
+texture = ExtResource("18_etjxw")
+
+[node name="CollisionShape2D" parent="Old Playbox" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Reap Owl plushy" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(936, -315)
+
+[node name="Sprite2D" parent="Reap Owl plushy" index="0"]
+texture = ExtResource("19_g7kk6")
+
+[node name="CollisionShape2D" parent="Reap Owl plushy" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[node name="Records" parent="." instance=ExtResource("1_7pd75")]
+position = Vector2(838, 94)
+
+[node name="Sprite2D" parent="Records" index="0"]
+z_index = -1
+texture = ExtResource("20_xbvom")
+
+[node name="CollisionShape2D" parent="Records" index="1"]
+shape = SubResource("CircleShape2D_1iggs")
+
+[editable path="Adventurer corner"]
+[editable path="Posters"]
+[editable path="Garbage Princess"]
+[editable path="Fate 2 books"]
+[editable path="Record Player"]
+[editable path="Egg Plushy"]
+[editable path="Playbox Games"]
+[editable path="Adventurer Figure"]
+[editable path="Friend and Miss Ern figures"]
+[editable path="Fate 2 Gun"]
+[editable path="M&M books"]
+[editable path="Eli's Gamepad"]
+[editable path="Eli and Sam photo"]
+[editable path="Lama plushies"]
+[editable path="Old Playbox"]
+[editable path="Reap Owl plushy"]
+[editable path="Records"]
