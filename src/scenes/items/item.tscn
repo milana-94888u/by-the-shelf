@@ -1,14 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://dk57ntjj2h1ug"]
+[gd_scene load_steps=4 format=3 uid="uid://dk57ntjj2h1ug"]
 
 [ext_resource type="Script" path="res://src/scenes/items/item.gd" id="1_3r527"]
+[ext_resource type="Shader" path="res://src/scenes/items/item_outline.gdshader" id="1_qoork"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_es12h"]
+resource_local_to_scene = true
+shader = ExtResource("1_qoork")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 4.0
+shader_parameter/pattern = 0
+shader_parameter/inside = true
+shader_parameter/enabled = false
 
 [node name="Item" type="Area2D"]
+material = SubResource("ShaderMaterial_es12h")
 collision_mask = 0
 monitoring = false
 monitorable = false
 script = ExtResource("1_3r527")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+use_parent_material = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 

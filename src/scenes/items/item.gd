@@ -3,11 +3,11 @@ extends Area2D
 
 
 func set_active() -> void:
-	pass
+	(material as ShaderMaterial).set_shader_parameter("enabled", true)
 
 
 func remove_active() -> void:
-	pass
+	(material as ShaderMaterial).set_shader_parameter("enabled", false)
 
 
 func interact() -> void:

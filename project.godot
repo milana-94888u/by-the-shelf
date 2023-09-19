@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 ItemsSelectionManager="*res://src/autoload/items_selection_manager.gd"
 
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+window/stretch/mode="viewport"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

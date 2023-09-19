@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://duuebwwefhpvg" path="res://src/scenes/room/Records.png" id="20_xbvom"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40afx"]
-size = Vector2(267, 117)
+size = Vector2(322, 117)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkwml"]
 size = Vector2(889, 566)
@@ -74,6 +74,7 @@ size = Vector2(123, 167)
 size = Vector2(156, 218)
 
 [node name="Room" type="Node2D"]
+position = Vector2(1280, 720)
 
 [node name="Front shelf" type="Sprite2D" parent="."]
 z_index = 10
@@ -90,7 +91,7 @@ position = Vector2(23, -430)
 texture = ExtResource("4_qt4xp")
 
 [node name="CollisionShape2D" parent="Adventurer corner" index="1"]
-position = Vector2(-34.5, -11.5)
+position = Vector2(-7, -11.5)
 shape = SubResource("RectangleShape2D_40afx")
 
 [node name="Posters" parent="." instance=ExtResource("1_7pd75")]
