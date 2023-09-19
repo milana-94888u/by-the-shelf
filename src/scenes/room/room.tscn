@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cx8gwlfthou1c"]
+[gd_scene load_steps=38 format=3 uid="uid://cx8gwlfthou1c"]
 
 [ext_resource type="PackedScene" uid="uid://dk57ntjj2h1ug" path="res://src/scenes/items/item.tscn" id="1_7pd75"]
 [ext_resource type="Texture2D" uid="uid://dqxvhrtnhn7xv" path="res://src/scenes/room/front shelf.png" id="1_62a16"]
@@ -21,8 +21,57 @@
 [ext_resource type="Texture2D" uid="uid://dmlr5wx3nqsrd" path="res://src/scenes/room/Reap Owl plushy.png" id="19_g7kk6"]
 [ext_resource type="Texture2D" uid="uid://duuebwwefhpvg" path="res://src/scenes/room/Records.png" id="20_xbvom"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1iggs"]
-resource_local_to_scene = true
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40afx"]
+size = Vector2(267, 117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkwml"]
+size = Vector2(889, 566)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ci267"]
+size = Vector2(71, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75mc7"]
+size = Vector2(122, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dycvq"]
+size = Vector2(122, 72)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6b5fw"]
+radius = 65.0
+height = 224.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqk10"]
+size = Vector2(114, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qc1vl"]
+size = Vector2(48, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkhbe"]
+size = Vector2(114, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_637ij"]
+size = Vector2(150, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u06qu"]
+size = Vector2(149, 162)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ghd3f"]
+radius = 45.0999
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_div70"]
+size = Vector2(92, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3bfp"]
+size = Vector2(236, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oo4ht"]
+size = Vector2(171, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7i28y"]
+size = Vector2(123, 167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rit85"]
+size = Vector2(156, 218)
 
 [node name="Room" type="Node2D"]
 
@@ -41,7 +90,8 @@ position = Vector2(23, -430)
 texture = ExtResource("4_qt4xp")
 
 [node name="CollisionShape2D" parent="Adventurer corner" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-34.5, -11.5)
+shape = SubResource("RectangleShape2D_40afx")
 
 [node name="Posters" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(-643, -292)
@@ -50,7 +100,8 @@ position = Vector2(-643, -292)
 texture = ExtResource("5_4iomi")
 
 [node name="CollisionShape2D" parent="Posters" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(4.5, -28)
+shape = SubResource("RectangleShape2D_rkwml")
 
 [node name="Garbage Princess" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(-50, -292)
@@ -59,7 +110,8 @@ position = Vector2(-50, -292)
 texture = ExtResource("6_jvqov")
 
 [node name="CollisionShape2D" parent="Garbage Princess" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-2.5, -8)
+shape = SubResource("RectangleShape2D_ci267")
 
 [node name="Fate 2 books" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(-63, -143)
@@ -68,7 +120,8 @@ position = Vector2(-63, -143)
 texture = ExtResource("7_hrbnr")
 
 [node name="CollisionShape2D" parent="Fate 2 books" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-5, -1)
+shape = SubResource("RectangleShape2D_75mc7")
 
 [node name="Record Player" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(-55, 23)
@@ -77,7 +130,8 @@ position = Vector2(-55, 23)
 texture = ExtResource("8_p0674")
 
 [node name="CollisionShape2D" parent="Record Player" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-8, 4)
+shape = SubResource("RectangleShape2D_dycvq")
 
 [node name="Egg Plushy" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(86, -19)
@@ -86,7 +140,8 @@ position = Vector2(86, -19)
 texture = ExtResource("9_hl2dy")
 
 [node name="CollisionShape2D" parent="Egg Plushy" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(11, -2)
+shape = SubResource("CapsuleShape2D_6b5fw")
 
 [node name="Playbox Games" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(254, 188)
@@ -95,7 +150,8 @@ position = Vector2(254, 188)
 texture = ExtResource("10_6c4o3")
 
 [node name="CollisionShape2D" parent="Playbox Games" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-8, -1.5)
+shape = SubResource("RectangleShape2D_hqk10")
 
 [node name="Adventurer Figure" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(370, -286)
@@ -104,7 +160,8 @@ position = Vector2(370, -286)
 texture = ExtResource("11_qslsa")
 
 [node name="CollisionShape2D" parent="Adventurer Figure" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_qc1vl")
 
 [node name="Friend and Miss Ern figures" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(453, -291)
@@ -113,7 +170,8 @@ position = Vector2(453, -291)
 texture = ExtResource("12_n3obw")
 
 [node name="CollisionShape2D" parent="Friend and Miss Ern figures" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(6, -0.5)
+shape = SubResource("RectangleShape2D_dkhbe")
 
 [node name="Fate 2 Gun" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(480, -395)
@@ -122,7 +180,8 @@ position = Vector2(480, -395)
 texture = ExtResource("13_165e6")
 
 [node name="CollisionShape2D" parent="Fate 2 Gun" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-5, 3.5)
+shape = SubResource("RectangleShape2D_637ij")
 
 [node name="M&M books" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(629, 78)
@@ -131,7 +190,8 @@ position = Vector2(629, 78)
 texture = ExtResource("14_pwkc4")
 
 [node name="CollisionShape2D" parent="M&M books" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-25.5, -3)
+shape = SubResource("RectangleShape2D_u06qu")
 
 [node name="Eli\'s Gamepad" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(-115, 325)
@@ -140,7 +200,8 @@ position = Vector2(-115, 325)
 texture = ExtResource("15_p11xh")
 
 [node name="CollisionShape2D" parent="Eli\'s Gamepad" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-7, 8)
+shape = SubResource("CircleShape2D_ghd3f")
 
 [node name="Eli and Sam photo" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(943, -95)
@@ -149,7 +210,8 @@ position = Vector2(943, -95)
 texture = ExtResource("16_fn1n2")
 
 [node name="CollisionShape2D" parent="Eli and Sam photo" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-1, -4)
+shape = SubResource("RectangleShape2D_div70")
 
 [node name="Lama plushies" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(1000, 108)
@@ -158,7 +220,8 @@ position = Vector2(1000, 108)
 texture = ExtResource("17_tyy2e")
 
 [node name="CollisionShape2D" parent="Lama plushies" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(28, 7)
+shape = SubResource("RectangleShape2D_h3bfp")
 
 [node name="Old Playbox" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(633, 259)
@@ -167,7 +230,8 @@ position = Vector2(633, 259)
 texture = ExtResource("18_etjxw")
 
 [node name="CollisionShape2D" parent="Old Playbox" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-7.5, 7)
+shape = SubResource("RectangleShape2D_oo4ht")
 
 [node name="Reap Owl plushy" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(936, -315)
@@ -176,7 +240,8 @@ position = Vector2(936, -315)
 texture = ExtResource("19_g7kk6")
 
 [node name="CollisionShape2D" parent="Reap Owl plushy" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(6.5, -5.5)
+shape = SubResource("RectangleShape2D_7i28y")
 
 [node name="Records" parent="." instance=ExtResource("1_7pd75")]
 position = Vector2(838, 94)
@@ -186,7 +251,8 @@ z_index = -1
 texture = ExtResource("20_xbvom")
 
 [node name="CollisionShape2D" parent="Records" index="1"]
-shape = SubResource("CircleShape2D_1iggs")
+position = Vector2(-7, 7)
+shape = SubResource("RectangleShape2D_rit85")
 
 [editable path="Adventurer corner"]
 [editable path="Posters"]
