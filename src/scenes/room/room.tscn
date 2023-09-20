@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dmlr5wx3nqsrd" path="res://assets/sprites/room/Reap Owl plushy.png" id="20_xnot1"]
 [ext_resource type="Texture2D" uid="uid://duuebwwefhpvg" path="res://assets/sprites/room/Records.png" id="21_qdteu"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nuki7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2eea"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -34,7 +34,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40afx"]
 size = Vector2(322, 117)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_orvdh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6xige"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -46,7 +46,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkwml"]
 size = Vector2(889, 566)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0ke3k"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yu5qe"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -58,7 +58,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci267"]
 size = Vector2(71, 122)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_j2lqd"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0sejm"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -70,7 +70,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75mc7"]
 size = Vector2(122, 112)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q53nt"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lxlvw"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -82,7 +82,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dycvq"]
 size = Vector2(122, 72)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b8615"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2blht"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -95,7 +95,7 @@ shader_parameter/enabled = false
 radius = 65.0
 height = 224.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6d5ab"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1pign"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -107,7 +107,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqk10"]
 size = Vector2(114, 81)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qc4ao"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kimps"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -119,7 +119,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qc1vl"]
 size = Vector2(48, 100)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_exmwf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fd7yb"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -131,7 +131,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dkhbe"]
 size = Vector2(114, 107)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_n8fao"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kwy0x"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -143,7 +143,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_637ij"]
 size = Vector2(150, 83)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xvl54"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6urvd"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -155,7 +155,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u06qu"]
 size = Vector2(149, 162)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_v5gsp"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bdnb7"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -167,7 +167,7 @@ shader_parameter/enabled = false
 [sub_resource type="CircleShape2D" id="CircleShape2D_ghd3f"]
 radius = 45.0999
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3wxaa"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7p8yv"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -179,7 +179,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_div70"]
 size = Vector2(92, 136)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e8gpo"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ce2ox"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -191,7 +191,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3bfp"]
 size = Vector2(236, 218)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pa57o"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bdyoy"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -203,7 +203,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo4ht"]
 size = Vector2(171, 80)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_k07ae"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_avs2v"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -215,7 +215,7 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i28y"]
 size = Vector2(123, 167)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3corq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i7net"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -239,7 +239,7 @@ z_index = -5
 texture = ExtResource("2_4iqde")
 
 [node name="Adventurer corner" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_nuki7")
+material = SubResource("ShaderMaterial_q2eea")
 position = Vector2(23, -430)
 
 [node name="Sprite2D" parent="Adventurer corner" index="0"]
@@ -250,7 +250,7 @@ position = Vector2(-7, -11.5)
 shape = SubResource("RectangleShape2D_40afx")
 
 [node name="Posters" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_orvdh")
+material = SubResource("ShaderMaterial_6xige")
 position = Vector2(-643, -292)
 
 [node name="Sprite2D" parent="Posters" index="0"]
@@ -261,7 +261,7 @@ position = Vector2(4.5, -28)
 shape = SubResource("RectangleShape2D_rkwml")
 
 [node name="Garbage Princess" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_0ke3k")
+material = SubResource("ShaderMaterial_yu5qe")
 position = Vector2(-50, -292)
 
 [node name="Sprite2D" parent="Garbage Princess" index="0"]
@@ -272,7 +272,7 @@ position = Vector2(-2.5, -8)
 shape = SubResource("RectangleShape2D_ci267")
 
 [node name="Fate 2 books" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_j2lqd")
+material = SubResource("ShaderMaterial_0sejm")
 position = Vector2(-63, -143)
 
 [node name="Sprite2D" parent="Fate 2 books" index="0"]
@@ -283,7 +283,7 @@ position = Vector2(-5, -1)
 shape = SubResource("RectangleShape2D_75mc7")
 
 [node name="Record Player" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_q53nt")
+material = SubResource("ShaderMaterial_lxlvw")
 position = Vector2(-55, 23)
 
 [node name="Sprite2D" parent="Record Player" index="0"]
@@ -294,7 +294,7 @@ position = Vector2(-8, 4)
 shape = SubResource("RectangleShape2D_dycvq")
 
 [node name="Egg Plushy" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_b8615")
+material = SubResource("ShaderMaterial_2blht")
 position = Vector2(86, -19)
 
 [node name="Sprite2D" parent="Egg Plushy" index="0"]
@@ -305,7 +305,7 @@ position = Vector2(11, -2)
 shape = SubResource("CapsuleShape2D_6b5fw")
 
 [node name="Playbox Games" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_6d5ab")
+material = SubResource("ShaderMaterial_1pign")
 position = Vector2(254, 188)
 
 [node name="Sprite2D" parent="Playbox Games" index="0"]
@@ -316,7 +316,7 @@ position = Vector2(-8, -1.5)
 shape = SubResource("RectangleShape2D_hqk10")
 
 [node name="Adventurer Figure" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_qc4ao")
+material = SubResource("ShaderMaterial_kimps")
 position = Vector2(370, -286)
 
 [node name="Sprite2D" parent="Adventurer Figure" index="0"]
@@ -327,7 +327,7 @@ position = Vector2(1, -3)
 shape = SubResource("RectangleShape2D_qc1vl")
 
 [node name="Friend and Miss Ern figures" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_exmwf")
+material = SubResource("ShaderMaterial_fd7yb")
 position = Vector2(453, -291)
 
 [node name="Sprite2D" parent="Friend and Miss Ern figures" index="0"]
@@ -338,7 +338,7 @@ position = Vector2(6, -0.5)
 shape = SubResource("RectangleShape2D_dkhbe")
 
 [node name="Fate 2 Gun" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_n8fao")
+material = SubResource("ShaderMaterial_kwy0x")
 position = Vector2(480, -395)
 
 [node name="Sprite2D" parent="Fate 2 Gun" index="0"]
@@ -349,7 +349,7 @@ position = Vector2(-5, 3.5)
 shape = SubResource("RectangleShape2D_637ij")
 
 [node name="M&M books" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_xvl54")
+material = SubResource("ShaderMaterial_6urvd")
 position = Vector2(629, 78)
 
 [node name="Sprite2D" parent="M&M books" index="0"]
@@ -360,7 +360,7 @@ position = Vector2(-25.5, -3)
 shape = SubResource("RectangleShape2D_u06qu")
 
 [node name="Eli\'s Gamepad" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_v5gsp")
+material = SubResource("ShaderMaterial_bdnb7")
 position = Vector2(-115, 325)
 
 [node name="Sprite2D" parent="Eli\'s Gamepad" index="0"]
@@ -371,7 +371,7 @@ position = Vector2(-7, 8)
 shape = SubResource("CircleShape2D_ghd3f")
 
 [node name="Eli and Sam photo" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_3wxaa")
+material = SubResource("ShaderMaterial_7p8yv")
 position = Vector2(943, -95)
 
 [node name="Sprite2D" parent="Eli and Sam photo" index="0"]
@@ -382,7 +382,7 @@ position = Vector2(-1, -4)
 shape = SubResource("RectangleShape2D_div70")
 
 [node name="Lama plushies" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_e8gpo")
+material = SubResource("ShaderMaterial_ce2ox")
 position = Vector2(1000, 108)
 
 [node name="Sprite2D" parent="Lama plushies" index="0"]
@@ -393,7 +393,7 @@ position = Vector2(28, 7)
 shape = SubResource("RectangleShape2D_h3bfp")
 
 [node name="Old Playbox" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_pa57o")
+material = SubResource("ShaderMaterial_bdyoy")
 position = Vector2(633, 259)
 
 [node name="Sprite2D" parent="Old Playbox" index="0"]
@@ -404,7 +404,7 @@ position = Vector2(-7.5, 7)
 shape = SubResource("RectangleShape2D_oo4ht")
 
 [node name="Reap Owl plushy" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_k07ae")
+material = SubResource("ShaderMaterial_avs2v")
 position = Vector2(936, -315)
 
 [node name="Sprite2D" parent="Reap Owl plushy" index="0"]
@@ -415,7 +415,7 @@ position = Vector2(6.5, -5.5)
 shape = SubResource("RectangleShape2D_7i28y")
 
 [node name="Records" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_3corq")
+material = SubResource("ShaderMaterial_i7net")
 position = Vector2(838, 94)
 
 [node name="Sprite2D" parent="Records" index="0"]
