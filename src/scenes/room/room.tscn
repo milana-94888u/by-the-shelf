@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://cx8gwlfthou1c"]
+[gd_scene load_steps=76 format=3 uid="uid://cx8gwlfthou1c"]
 
 [ext_resource type="PackedScene" uid="uid://dk57ntjj2h1ug" path="res://src/scenes/items/item.tscn" id="1_7pd75"]
 [ext_resource type="Texture2D" uid="uid://dqxvhrtnhn7xv" path="res://assets/sprites/room/front shelf.png" id="1_d3g6v"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bung5hx8myuo5" path="res://assets/sprites/room/Adventurer corner.png" id="5_sc0h6"]
 [ext_resource type="Texture2D" uid="uid://buy0qvaws43oo" path="res://assets/sprites/room/Posters.png" id="6_lrpvm"]
 [ext_resource type="Script" path="res://src/resources/item_data.gd" id="6_tp2ly"]
+[ext_resource type="Script" path="res://src/resources/dialog/item_dialog.gd" id="7_amljd"]
 [ext_resource type="Texture2D" uid="uid://bga4ua58s2s3k" path="res://assets/sprites/room/Garbage Princess figure.png" id="7_ce804"]
 [ext_resource type="Texture2D" uid="uid://dwiqy42smajtp" path="res://assets/sprites/room/Fate 2 Books.png" id="8_6gm1l"]
 [ext_resource type="Texture2D" uid="uid://b5rqdax38t8bu" path="res://assets/sprites/room/Record player.png" id="9_n08t4"]
@@ -23,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://dmlr5wx3nqsrd" path="res://assets/sprites/room/Reap Owl plushy.png" id="20_xnot1"]
 [ext_resource type="Texture2D" uid="uid://duuebwwefhpvg" path="res://assets/sprites/room/Records.png" id="21_qdteu"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kxjwt"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7hxwv"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -35,12 +36,18 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40afx"]
 size = Vector2(322, 117)
 
-[sub_resource type="Resource" id="Resource_gnn6x"]
+[sub_resource type="Resource" id="Resource_o7j4t"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("5_sc0h6")
 item_collision = SubResource("RectangleShape2D_40afx")
+item_name = "Adventurer corner"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xasuy"]
+[sub_resource type="Resource" id="Resource_dh4kg"]
+script = ExtResource("7_amljd")
+lines = Array[Resource("res://src/resources/dialog/dialog_line_base.gd")]([])
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_unkh8"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -52,12 +59,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkwml"]
 size = Vector2(889, 566)
 
-[sub_resource type="Resource" id="Resource_c4j4f"]
+[sub_resource type="Resource" id="Resource_sibmd"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("6_lrpvm")
 item_collision = SubResource("RectangleShape2D_rkwml")
+item_name = "Posters"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_w0x76"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g45k6"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -69,12 +78,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci267"]
 size = Vector2(71, 122)
 
-[sub_resource type="Resource" id="Resource_8koxk"]
+[sub_resource type="Resource" id="Resource_e7uvp"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("7_ce804")
 item_collision = SubResource("RectangleShape2D_ci267")
+item_name = "Garbage Princess"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e5kd7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5ymu"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -86,12 +97,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75mc7"]
 size = Vector2(122, 112)
 
-[sub_resource type="Resource" id="Resource_mo450"]
+[sub_resource type="Resource" id="Resource_gfsrv"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("8_6gm1l")
 item_collision = SubResource("RectangleShape2D_75mc7")
+item_name = "Fate 2 books"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8t4d5"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h288x"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -103,12 +116,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dycvq"]
 size = Vector2(122, 72)
 
-[sub_resource type="Resource" id="Resource_ag41l"]
+[sub_resource type="Resource" id="Resource_4p65n"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("9_n08t4")
 item_collision = SubResource("RectangleShape2D_dycvq")
+item_name = "Record Player"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_brk5f"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nh2vq"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -121,12 +136,14 @@ shader_parameter/enabled = false
 radius = 65.0
 height = 224.0
 
-[sub_resource type="Resource" id="Resource_h6k3a"]
+[sub_resource type="Resource" id="Resource_2wjah"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("10_y88no")
 item_collision = SubResource("CapsuleShape2D_6b5fw")
+item_name = "Egg Plushy"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c87x2"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qgdcu"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -138,12 +155,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqk10"]
 size = Vector2(114, 81)
 
-[sub_resource type="Resource" id="Resource_ahprv"]
+[sub_resource type="Resource" id="Resource_58jol"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("11_psmt1")
 item_collision = SubResource("RectangleShape2D_hqk10")
+item_name = "Playbox Games"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_k4o3s"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c2pda"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -155,12 +174,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qc1vl"]
 size = Vector2(48, 100)
 
-[sub_resource type="Resource" id="Resource_enm6n"]
+[sub_resource type="Resource" id="Resource_h8g84"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("12_tpie6")
 item_collision = SubResource("RectangleShape2D_qc1vl")
+item_name = "Adventurer Figure"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c33ku"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w1w4t"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -172,12 +193,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dkhbe"]
 size = Vector2(114, 107)
 
-[sub_resource type="Resource" id="Resource_5d4wj"]
+[sub_resource type="Resource" id="Resource_a5fns"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("13_6mbf6")
 item_collision = SubResource("RectangleShape2D_dkhbe")
+item_name = "Friend and Miss Ern figures"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pkooo"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8iu7t"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -189,12 +212,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_637ij"]
 size = Vector2(150, 83)
 
-[sub_resource type="Resource" id="Resource_j8cbf"]
+[sub_resource type="Resource" id="Resource_jm2j8"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("14_mv2g4")
 item_collision = SubResource("RectangleShape2D_637ij")
+item_name = "Fate 2 Gun"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_li4f2"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ir34"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -206,12 +231,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u06qu"]
 size = Vector2(149, 162)
 
-[sub_resource type="Resource" id="Resource_d6tln"]
+[sub_resource type="Resource" id="Resource_0ypak"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("15_ngvu6")
 item_collision = SubResource("RectangleShape2D_u06qu")
+item_name = "M&M books"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2gv0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_85smf"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -223,12 +250,14 @@ shader_parameter/enabled = false
 [sub_resource type="CircleShape2D" id="CircleShape2D_ghd3f"]
 radius = 45.0999
 
-[sub_resource type="Resource" id="Resource_2qagd"]
+[sub_resource type="Resource" id="Resource_vdm7d"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("16_7myrp")
 item_collision = SubResource("CircleShape2D_ghd3f")
+item_name = "Eli's Gamepad"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dh67u"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3liu"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -240,12 +269,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_div70"]
 size = Vector2(92, 136)
 
-[sub_resource type="Resource" id="Resource_yxp8x"]
+[sub_resource type="Resource" id="Resource_os8a6"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("17_hoqgi")
 item_collision = SubResource("RectangleShape2D_div70")
+item_name = "Eli and Sam photo"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0e14c"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vl17g"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -257,12 +288,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3bfp"]
 size = Vector2(236, 218)
 
-[sub_resource type="Resource" id="Resource_h5kar"]
+[sub_resource type="Resource" id="Resource_y31hn"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("18_8pda0")
 item_collision = SubResource("RectangleShape2D_h3bfp")
+item_name = "Lama plushies"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2kypk"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vtt25"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -274,12 +307,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo4ht"]
 size = Vector2(171, 80)
 
-[sub_resource type="Resource" id="Resource_b5g6s"]
+[sub_resource type="Resource" id="Resource_cx5na"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("19_ly18v")
 item_collision = SubResource("RectangleShape2D_oo4ht")
+item_name = "Old Playbox"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g0am2"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbff1"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -291,12 +326,14 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i28y"]
 size = Vector2(123, 167)
 
-[sub_resource type="Resource" id="Resource_lhn5r"]
+[sub_resource type="Resource" id="Resource_ijyha"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("20_xnot1")
 item_collision = SubResource("RectangleShape2D_7i28y")
+item_name = "Reap Owl plushy"
+item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ch2j0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k111e"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -308,10 +345,12 @@ shader_parameter/enabled = false
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rit85"]
 size = Vector2(156, 218)
 
-[sub_resource type="Resource" id="Resource_erpuv"]
+[sub_resource type="Resource" id="Resource_hhi80"]
 script = ExtResource("6_tp2ly")
 item_texture = ExtResource("21_qdteu")
 item_collision = SubResource("RectangleShape2D_rit85")
+item_name = "Records"
+item_description = ""
 
 [node name="Room" type="Node2D"]
 position = Vector2(1280, 720)
@@ -325,9 +364,10 @@ z_index = -5
 texture = ExtResource("2_4iqde")
 
 [node name="Adventurer corner" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_kxjwt")
+material = SubResource("ShaderMaterial_7hxwv")
 position = Vector2(23, -430)
-item_data = SubResource("Resource_gnn6x")
+item_data = SubResource("Resource_o7j4t")
+item_dialog = SubResource("Resource_dh4kg")
 
 [node name="Sprite2D" parent="Adventurer corner" index="0"]
 texture = ExtResource("5_sc0h6")
@@ -337,9 +377,9 @@ position = Vector2(-7, -11.5)
 shape = SubResource("RectangleShape2D_40afx")
 
 [node name="Posters" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_xasuy")
+material = SubResource("ShaderMaterial_unkh8")
 position = Vector2(-643, -292)
-item_data = SubResource("Resource_c4j4f")
+item_data = SubResource("Resource_sibmd")
 
 [node name="Sprite2D" parent="Posters" index="0"]
 texture = ExtResource("6_lrpvm")
@@ -349,9 +389,9 @@ position = Vector2(4.5, -28)
 shape = SubResource("RectangleShape2D_rkwml")
 
 [node name="Garbage Princess" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_w0x76")
+material = SubResource("ShaderMaterial_g45k6")
 position = Vector2(-50, -292)
-item_data = SubResource("Resource_8koxk")
+item_data = SubResource("Resource_e7uvp")
 
 [node name="Sprite2D" parent="Garbage Princess" index="0"]
 texture = ExtResource("7_ce804")
@@ -361,9 +401,9 @@ position = Vector2(-2.5, -8)
 shape = SubResource("RectangleShape2D_ci267")
 
 [node name="Fate 2 books" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_e5kd7")
+material = SubResource("ShaderMaterial_i5ymu")
 position = Vector2(-63, -143)
-item_data = SubResource("Resource_mo450")
+item_data = SubResource("Resource_gfsrv")
 
 [node name="Sprite2D" parent="Fate 2 books" index="0"]
 texture = ExtResource("8_6gm1l")
@@ -373,9 +413,9 @@ position = Vector2(-5, -1)
 shape = SubResource("RectangleShape2D_75mc7")
 
 [node name="Record Player" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_8t4d5")
+material = SubResource("ShaderMaterial_h288x")
 position = Vector2(-55, 23)
-item_data = SubResource("Resource_ag41l")
+item_data = SubResource("Resource_4p65n")
 
 [node name="Sprite2D" parent="Record Player" index="0"]
 texture = ExtResource("9_n08t4")
@@ -385,9 +425,9 @@ position = Vector2(-8, 4)
 shape = SubResource("RectangleShape2D_dycvq")
 
 [node name="Egg Plushy" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_brk5f")
+material = SubResource("ShaderMaterial_nh2vq")
 position = Vector2(86, -19)
-item_data = SubResource("Resource_h6k3a")
+item_data = SubResource("Resource_2wjah")
 
 [node name="Sprite2D" parent="Egg Plushy" index="0"]
 texture = ExtResource("10_y88no")
@@ -397,9 +437,9 @@ position = Vector2(11, -2)
 shape = SubResource("CapsuleShape2D_6b5fw")
 
 [node name="Playbox Games" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_c87x2")
+material = SubResource("ShaderMaterial_qgdcu")
 position = Vector2(254, 188)
-item_data = SubResource("Resource_ahprv")
+item_data = SubResource("Resource_58jol")
 
 [node name="Sprite2D" parent="Playbox Games" index="0"]
 texture = ExtResource("11_psmt1")
@@ -409,9 +449,9 @@ position = Vector2(-8, -1.5)
 shape = SubResource("RectangleShape2D_hqk10")
 
 [node name="Adventurer Figure" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_k4o3s")
+material = SubResource("ShaderMaterial_c2pda")
 position = Vector2(370, -286)
-item_data = SubResource("Resource_enm6n")
+item_data = SubResource("Resource_h8g84")
 
 [node name="Sprite2D" parent="Adventurer Figure" index="0"]
 texture = ExtResource("12_tpie6")
@@ -421,9 +461,9 @@ position = Vector2(1, -3)
 shape = SubResource("RectangleShape2D_qc1vl")
 
 [node name="Friend and Miss Ern figures" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_c33ku")
+material = SubResource("ShaderMaterial_w1w4t")
 position = Vector2(453, -291)
-item_data = SubResource("Resource_5d4wj")
+item_data = SubResource("Resource_a5fns")
 
 [node name="Sprite2D" parent="Friend and Miss Ern figures" index="0"]
 texture = ExtResource("13_6mbf6")
@@ -433,9 +473,9 @@ position = Vector2(6, -0.5)
 shape = SubResource("RectangleShape2D_dkhbe")
 
 [node name="Fate 2 Gun" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_pkooo")
+material = SubResource("ShaderMaterial_8iu7t")
 position = Vector2(480, -395)
-item_data = SubResource("Resource_j8cbf")
+item_data = SubResource("Resource_jm2j8")
 
 [node name="Sprite2D" parent="Fate 2 Gun" index="0"]
 texture = ExtResource("14_mv2g4")
@@ -445,9 +485,9 @@ position = Vector2(-5, 3.5)
 shape = SubResource("RectangleShape2D_637ij")
 
 [node name="M&M books" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_li4f2")
+material = SubResource("ShaderMaterial_2ir34")
 position = Vector2(629, 78)
-item_data = SubResource("Resource_d6tln")
+item_data = SubResource("Resource_0ypak")
 
 [node name="Sprite2D" parent="M&M books" index="0"]
 texture = ExtResource("15_ngvu6")
@@ -457,9 +497,9 @@ position = Vector2(-25.5, -3)
 shape = SubResource("RectangleShape2D_u06qu")
 
 [node name="Eli\'s Gamepad" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_d2gv0")
+material = SubResource("ShaderMaterial_85smf")
 position = Vector2(-115, 325)
-item_data = SubResource("Resource_2qagd")
+item_data = SubResource("Resource_vdm7d")
 
 [node name="Sprite2D" parent="Eli\'s Gamepad" index="0"]
 texture = ExtResource("16_7myrp")
@@ -469,9 +509,9 @@ position = Vector2(-7, 8)
 shape = SubResource("CircleShape2D_ghd3f")
 
 [node name="Eli and Sam photo" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_dh67u")
+material = SubResource("ShaderMaterial_r3liu")
 position = Vector2(943, -95)
-item_data = SubResource("Resource_yxp8x")
+item_data = SubResource("Resource_os8a6")
 
 [node name="Sprite2D" parent="Eli and Sam photo" index="0"]
 texture = ExtResource("17_hoqgi")
@@ -481,9 +521,9 @@ position = Vector2(-1, -4)
 shape = SubResource("RectangleShape2D_div70")
 
 [node name="Lama plushies" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_0e14c")
+material = SubResource("ShaderMaterial_vl17g")
 position = Vector2(1000, 108)
-item_data = SubResource("Resource_h5kar")
+item_data = SubResource("Resource_y31hn")
 
 [node name="Sprite2D" parent="Lama plushies" index="0"]
 texture = ExtResource("18_8pda0")
@@ -493,9 +533,9 @@ position = Vector2(28, 7)
 shape = SubResource("RectangleShape2D_h3bfp")
 
 [node name="Old Playbox" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_2kypk")
+material = SubResource("ShaderMaterial_vtt25")
 position = Vector2(633, 259)
-item_data = SubResource("Resource_b5g6s")
+item_data = SubResource("Resource_cx5na")
 
 [node name="Sprite2D" parent="Old Playbox" index="0"]
 texture = ExtResource("19_ly18v")
@@ -505,9 +545,9 @@ position = Vector2(-7.5, 7)
 shape = SubResource("RectangleShape2D_oo4ht")
 
 [node name="Reap Owl plushy" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_g0am2")
+material = SubResource("ShaderMaterial_hbff1")
 position = Vector2(936, -315)
-item_data = SubResource("Resource_lhn5r")
+item_data = SubResource("Resource_ijyha")
 
 [node name="Sprite2D" parent="Reap Owl plushy" index="0"]
 texture = ExtResource("20_xnot1")
@@ -517,9 +557,9 @@ position = Vector2(6.5, -5.5)
 shape = SubResource("RectangleShape2D_7i28y")
 
 [node name="Records" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_ch2j0")
+material = SubResource("ShaderMaterial_k111e")
 position = Vector2(838, 94)
-item_data = SubResource("Resource_erpuv")
+item_data = SubResource("Resource_hhi80")
 
 [node name="Sprite2D" parent="Records" index="0"]
 z_index = -1

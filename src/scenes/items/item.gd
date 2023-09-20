@@ -15,6 +15,8 @@ extends Area2D
 		sprite.texture = item_data.item_texture
 		collision_shape.shape = item_data.item_collision
 
+@export var item_dialog: ItemDialog
+
 
 func set_active() -> void:
 	(material as ShaderMaterial).set_shader_parameter("enabled", true)

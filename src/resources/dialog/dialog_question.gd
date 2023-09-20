@@ -1,6 +1,5 @@
 class_name DialogQuestion
-extends Resource
+extends DialogLineBase
 
 
-@export var question_text: String
 @export var options: Array[DialogOption]
