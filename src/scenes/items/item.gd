@@ -1,13 +1,19 @@
+@tool
 class_name Item
 extends Area2D
 
 
-@export var dialog_question: DialogQuestion
+@onready var sprite := $Sprite2D as Sprite2D
+@onready var collision_shape := $CollisionShape2D as CollisionShape2D
 
-@export var item_texture: Texture2D:
-	set(new_texture):
-		item_texture = new_texture
-		$Sprite2D.texture = item_texture
+
+@export var item_data: ItemData:
+	set(new_item_data):
+		item_data = new_item_data
+		if not is_node_ready():
+			await ready
+		sprite.texture = item_data.item_texture
+		collision_shape.shape = item_data.item_collision
 
 
 func set_active() -> void:
@@ -22,8 +28,11 @@ func interact() -> void:
 	pass
 
 
-func _ready() -> void:
-	$Sprite2D.texture = item_texture
+#func _ready() -> void:
+#	item_data = ItemData.new()
+#	item_data.item_collision = collision_shape.shape
+#	item_data.item_texture = sprite.texture
+#	item_data.item_name = name
 
 
 func _on_mouse_entered() -> void:

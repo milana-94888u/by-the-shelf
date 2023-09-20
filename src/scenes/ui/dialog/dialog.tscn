@@ -12,3 +12,6 @@ script = ExtResource("1_walwp")
 
 [node name="Options" type="VBoxContainer" parent="."]
 layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
