@@ -1,7 +1,13 @@
+class_name Dialog
 extends Control
 
 
 signal dialog_finished(is_item_taken: bool)
+
+
+@onready var item_name_label := $HSplitContainer/ItemSide/VBoxContainer/ItemName as Label
+@onready var item_texture_rect := $HSplitContainer/ItemSide/VBoxContainer/ItemTexture as TextureRect
+@onready var item_description_label := $HSplitContainer/ItemSide/VBoxContainer/ItemDescription as Label
 
 
 @onready var line_said_by := $HSplitContainer/DialogSide/DialogBox/DialogPanel/DialogLine/LineSaidBy as Label
@@ -11,6 +17,8 @@ signal dialog_finished(is_item_taken: bool)
 
 
 var is_item_taken := false
+
+var is_in_dialog := false
 
 
 class DialogLinesRow extends RefCounted:
@@ -31,11 +39,14 @@ class DialogLinesRow extends RefCounted:
 var dialog_stack: Array[DialogLinesRow]
 
 
-var current_line: DialogLineBase
-
-
-func show_dialog(dialog: ItemDialog) -> void:
-	pass
+func show_dialog(dialog: ItemDialog, item_data: ItemData) -> void:
+	show()
+	dialog_stack.push_back(DialogLinesRow.new(dialog.lines))
+	item_name_label.text = item_data.item_name
+	item_texture_rect.texture = item_data.item_texture
+	item_description_label.text = item_data.item_description
+	is_in_dialog = true
+	move_line()
 
 
 func get_next_line() -> DialogLineBase:
@@ -54,6 +65,7 @@ func choose_option(option: DialogOption) -> void:
 	RelationshipManager.relationship += option.relationship_change
 	is_item_taken = is_item_taken or option.is_item_taken
 	dialog_stack.push_back(DialogLinesRow.new(option.next_lines))
+	move_line()
 
 
 func add_option(option: DialogOption) -> void:
@@ -87,14 +99,18 @@ func show_question(question: DialogQuestion) -> void:
 func move_line() -> void:
 	var next_line := get_next_line()
 	if next_line == null:
+		is_in_dialog = false
 		dialog_finished.emit(is_item_taken)
+		return
 	if next_line is DialogQuestion:
 		show_question(next_line)
 	else:
 		show_line(next_line)
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
+	if not is_in_dialog:
+		return
 	if event.is_action_pressed("ui_accept"):
 		if not options_panel.visible:
 			move_line()

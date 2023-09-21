@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dk57ntjj2h1ug"]
+[gd_scene load_steps=7 format=3 uid="uid://dk57ntjj2h1ug"]
 
 [ext_resource type="Script" path="res://src/scenes/items/item.gd" id="1_3r527"]
 [ext_resource type="Shader" path="res://src/scenes/items/item_outline.gdshader" id="1_qoork"]
 [ext_resource type="Script" path="res://src/resources/item_data.gd" id="3_sijgi"]
+[ext_resource type="PackedScene" uid="uid://dhraq5wuj21ex" path="res://src/scenes/ui/dialog/dialog.tscn" id="4_cy45v"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_es12h"]
 resource_local_to_scene = true
@@ -31,5 +32,11 @@ use_parent_material = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
+[node name="DialogLayer" type="CanvasLayer" parent="."]
+
+[node name="Dialog" parent="DialogLayer" instance=ExtResource("4_cy45v")]
+visible = false
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="dialog_finished" from="DialogLayer/Dialog" to="." method="_on_dialog_dialog_finished"]

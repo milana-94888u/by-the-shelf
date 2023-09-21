@@ -18,6 +18,8 @@ content_margin_bottom = 10.0
 [resource]
 default_font_size = 64
 Button/styles/normal = SubResource("StyleBoxFlat_raed3")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 8
 Label/styles/normal = SubResource("StyleBoxEmpty_qhbg1")
 MarginContainer/constants/margin_bottom = 100
 MarginContainer/constants/margin_left = 50
