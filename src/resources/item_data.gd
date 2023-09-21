@@ -4,6 +4,7 @@ extends Resource
 
 @export_category("Appearance")
 @export var item_texture: Texture2D
+@export var item_closeup_texture: Texture2D
 @export var item_collision: Shape2D
 
 @export_category("Description")
