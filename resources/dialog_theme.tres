@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b7nn268uktht6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_raed3"]
+content_margin_left = 40.0
+content_margin_right = 40.0
+bg_color = Color(0.635294, 0.576471, 0.662745, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qhbg1"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+
+[resource]
+default_font_size = 64
+Button/styles/normal = SubResource("StyleBoxFlat_raed3")
+Label/styles/normal = SubResource("StyleBoxEmpty_qhbg1")
+MarginContainer/constants/margin_bottom = 100
+MarginContainer/constants/margin_left = 50
+MarginContainer/constants/margin_right = 50
+MarginContainer/constants/margin_top = 100

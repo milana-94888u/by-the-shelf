@@ -1,17 +1,76 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhraq5wuj21ex"]
+[gd_scene load_steps=3 format=3 uid="uid://dhraq5wuj21ex"]
 
+[ext_resource type="Theme" uid="uid://b7nn268uktht6" path="res://resources/dialog_theme.tres" id="1_s2vxe"]
 [ext_resource type="Script" path="res://src/scenes/ui/dialog/dialog.gd" id="1_walwp"]
 
-[node name="Dialog" type="VBoxContainer"]
+[node name="Dialog" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_s2vxe")
 script = ExtResource("1_walwp")
 
-[node name="Options" type="VBoxContainer" parent="."]
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 1200
+
+[node name="DialogSide" type="MarginContainer" parent="HSplitContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="DialogBox" type="VSplitContainer" parent="HSplitContainer/DialogSide"]
+custom_minimum_size = Vector2(0, 720)
 layout_mode = 2
+size_flags_vertical = 8
+split_offset = 400
+
+[node name="DialogPanel" type="Panel" parent="HSplitContainer/DialogSide/DialogBox"]
+layout_mode = 2
+
+[node name="DialogLine" type="VSplitContainer" parent="HSplitContainer/DialogSide/DialogBox/DialogPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineSaidBy" type="Label" parent="HSplitContainer/DialogSide/DialogBox/DialogPanel/DialogLine"]
+layout_mode = 2
+text = "Sam"
+
+[node name="LineText" type="Label" parent="HSplitContainer/DialogSide/DialogBox/DialogPanel/DialogLine"]
+layout_mode = 2
+text = "Are you taking it with you?"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Options" type="VBoxContainer" parent="HSplitContainer/DialogSide/DialogBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="HSplitContainer/DialogSide/DialogBox/Options"]
+layout_mode = 2
+text = "Yes
+"
+alignment = 0
+
+[node name="Button2" type="Button" parent="HSplitContainer/DialogSide/DialogBox/Options"]
+layout_mode = 2
+text = "No"
+alignment = 0
+
+[node name="ItemSide" type="MarginContainer" parent="HSplitContainer"]
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="HSplitContainer/ItemSide"]
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 5

@@ -1,11 +1,100 @@
-extends VBoxContainer
+extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+signal dialog_finished(is_item_taken: bool)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+@onready var line_said_by := $HSplitContainer/DialogSide/DialogBox/DialogPanel/DialogLine/LineSaidBy as Label
+@onready var line_text := $HSplitContainer/DialogSide/DialogBox/DialogPanel/DialogLine/LineText as Label
+
+@onready var options_panel := $HSplitContainer/DialogSide/DialogBox/Options as VBoxContainer
+
+
+var is_item_taken := false
+
+
+class DialogLinesRow extends RefCounted:
+	var lines: Array[DialogLineBase]
+	var current_index := 0
+
+	func _init(dialog_lines: Array[DialogLineBase]) -> void:
+		lines = dialog_lines
+	
+	func get_next_line() -> DialogLineBase:
+		var result: DialogLineBase
+		if current_index < lines.size():
+			result = lines[current_index]
+		current_index += 1
+		return result
+
+
+var dialog_stack: Array[DialogLinesRow]
+
+
+var current_line: DialogLineBase
+
+
+func show_dialog(dialog: ItemDialog) -> void:
 	pass
+
+
+func get_next_line() -> DialogLineBase:
+	if dialog_stack.size() == 0:
+		return null
+	var result := dialog_stack[-1].get_next_line()
+	if result != null:
+		return result
+	while dialog_stack.size() > 1 and result == null:
+		dialog_stack.pop_back()
+		result = dialog_stack[-1].get_next_line()
+	return result
+
+
+func choose_option(option: DialogOption) -> void:
+	RelationshipManager.relationship += option.relationship_change
+	is_item_taken = is_item_taken or option.is_item_taken
+	dialog_stack.push_back(DialogLinesRow.new(option.next_lines))
+
+
+func add_option(option: DialogOption) -> void:
+	var option_button := Button.new()
+	option_button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+	option_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	option_button.text = option.option_text
+	option_button.pressed.connect(choose_option.bind(option))
+	options_panel.add_child(option_button)
+
+
+func fill_options(options: Array[DialogOption]) -> void:
+	for child in options_panel.get_children():
+		options_panel.remove_child(child)
+	for option in options:
+		add_option(option)
+
+
+func show_line(line: DialogLineBase) -> void:
+	options_panel.hide()
+	line_said_by.text = line.said_by
+	line_text.text = line.line_text
+
+
+func show_question(question: DialogQuestion) -> void:
+	show_line(question)
+	fill_options(question.options)
+	options_panel.show()
+
+
+func move_line() -> void:
+	var next_line := get_next_line()
+	if next_line == null:
+		dialog_finished.emit(is_item_taken)
+	if next_line is DialogQuestion:
+		show_question(next_line)
+	else:
+		show_line(next_line)
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		if not options_panel.visible:
+			move_line()

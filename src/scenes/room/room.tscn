@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://cx8gwlfthou1c"]
+[gd_scene load_steps=74 format=3 uid="uid://cx8gwlfthou1c"]
 
 [ext_resource type="PackedScene" uid="uid://dk57ntjj2h1ug" path="res://src/scenes/items/item.tscn" id="1_7pd75"]
 [ext_resource type="Texture2D" uid="uid://dqxvhrtnhn7xv" path="res://assets/sprites/room/front shelf.png" id="1_d3g6v"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bung5hx8myuo5" path="res://assets/sprites/room/Adventurer corner.png" id="5_sc0h6"]
 [ext_resource type="Texture2D" uid="uid://buy0qvaws43oo" path="res://assets/sprites/room/Posters.png" id="6_lrpvm"]
 [ext_resource type="Script" path="res://src/resources/item_data.gd" id="6_tp2ly"]
-[ext_resource type="Script" path="res://src/resources/dialog/item_dialog.gd" id="7_amljd"]
 [ext_resource type="Texture2D" uid="uid://bga4ua58s2s3k" path="res://assets/sprites/room/Garbage Princess figure.png" id="7_ce804"]
 [ext_resource type="Texture2D" uid="uid://dwiqy42smajtp" path="res://assets/sprites/room/Fate 2 Books.png" id="8_6gm1l"]
 [ext_resource type="Texture2D" uid="uid://b5rqdax38t8bu" path="res://assets/sprites/room/Record player.png" id="9_n08t4"]
@@ -24,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dmlr5wx3nqsrd" path="res://assets/sprites/room/Reap Owl plushy.png" id="20_xnot1"]
 [ext_resource type="Texture2D" uid="uid://duuebwwefhpvg" path="res://assets/sprites/room/Records.png" id="21_qdteu"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7hxwv"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u811y"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -43,11 +42,7 @@ item_collision = SubResource("RectangleShape2D_40afx")
 item_name = "Adventurer corner"
 item_description = ""
 
-[sub_resource type="Resource" id="Resource_dh4kg"]
-script = ExtResource("7_amljd")
-lines = Array[Resource("res://src/resources/dialog/dialog_line_base.gd")]([])
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_unkh8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m7vp7"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -66,7 +61,7 @@ item_collision = SubResource("RectangleShape2D_rkwml")
 item_name = "Posters"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g45k6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4yngn"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -85,7 +80,7 @@ item_collision = SubResource("RectangleShape2D_ci267")
 item_name = "Garbage Princess"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5ymu"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fbiqe"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -104,7 +99,7 @@ item_collision = SubResource("RectangleShape2D_75mc7")
 item_name = "Fate 2 books"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_h288x"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhpxl"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -123,7 +118,7 @@ item_collision = SubResource("RectangleShape2D_dycvq")
 item_name = "Record Player"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nh2vq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rd1xd"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -143,7 +138,7 @@ item_collision = SubResource("CapsuleShape2D_6b5fw")
 item_name = "Egg Plushy"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qgdcu"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qgfpu"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -162,7 +157,7 @@ item_collision = SubResource("RectangleShape2D_hqk10")
 item_name = "Playbox Games"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c2pda"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2aomb"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -181,7 +176,7 @@ item_collision = SubResource("RectangleShape2D_qc1vl")
 item_name = "Adventurer Figure"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_w1w4t"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l858k"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -200,7 +195,7 @@ item_collision = SubResource("RectangleShape2D_dkhbe")
 item_name = "Friend and Miss Ern figures"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8iu7t"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5otpl"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -219,7 +214,7 @@ item_collision = SubResource("RectangleShape2D_637ij")
 item_name = "Fate 2 Gun"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ir34"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wv3pk"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -238,7 +233,7 @@ item_collision = SubResource("RectangleShape2D_u06qu")
 item_name = "M&M books"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_85smf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4f53j"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -257,7 +252,7 @@ item_collision = SubResource("CircleShape2D_ghd3f")
 item_name = "Eli's Gamepad"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3liu"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7faxs"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -276,7 +271,7 @@ item_collision = SubResource("RectangleShape2D_div70")
 item_name = "Eli and Sam photo"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vl17g"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kv30u"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -295,7 +290,7 @@ item_collision = SubResource("RectangleShape2D_h3bfp")
 item_name = "Lama plushies"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vtt25"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hvqlm"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -314,7 +309,7 @@ item_collision = SubResource("RectangleShape2D_oo4ht")
 item_name = "Old Playbox"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbff1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v7t6i"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -333,7 +328,7 @@ item_collision = SubResource("RectangleShape2D_7i28y")
 item_name = "Reap Owl plushy"
 item_description = ""
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_k111e"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fuv0b"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -364,10 +359,9 @@ z_index = -5
 texture = ExtResource("2_4iqde")
 
 [node name="Adventurer corner" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_7hxwv")
+material = SubResource("ShaderMaterial_u811y")
 position = Vector2(23, -430)
 item_data = SubResource("Resource_o7j4t")
-item_dialog = SubResource("Resource_dh4kg")
 
 [node name="Sprite2D" parent="Adventurer corner" index="0"]
 texture = ExtResource("5_sc0h6")
@@ -377,7 +371,7 @@ position = Vector2(-7, -11.5)
 shape = SubResource("RectangleShape2D_40afx")
 
 [node name="Posters" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_unkh8")
+material = SubResource("ShaderMaterial_m7vp7")
 position = Vector2(-643, -292)
 item_data = SubResource("Resource_sibmd")
 
@@ -389,7 +383,7 @@ position = Vector2(4.5, -28)
 shape = SubResource("RectangleShape2D_rkwml")
 
 [node name="Garbage Princess" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_g45k6")
+material = SubResource("ShaderMaterial_4yngn")
 position = Vector2(-50, -292)
 item_data = SubResource("Resource_e7uvp")
 
@@ -401,7 +395,7 @@ position = Vector2(-2.5, -8)
 shape = SubResource("RectangleShape2D_ci267")
 
 [node name="Fate 2 books" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_i5ymu")
+material = SubResource("ShaderMaterial_fbiqe")
 position = Vector2(-63, -143)
 item_data = SubResource("Resource_gfsrv")
 
@@ -413,7 +407,7 @@ position = Vector2(-5, -1)
 shape = SubResource("RectangleShape2D_75mc7")
 
 [node name="Record Player" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_h288x")
+material = SubResource("ShaderMaterial_bhpxl")
 position = Vector2(-55, 23)
 item_data = SubResource("Resource_4p65n")
 
@@ -425,7 +419,7 @@ position = Vector2(-8, 4)
 shape = SubResource("RectangleShape2D_dycvq")
 
 [node name="Egg Plushy" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_nh2vq")
+material = SubResource("ShaderMaterial_rd1xd")
 position = Vector2(86, -19)
 item_data = SubResource("Resource_2wjah")
 
@@ -437,7 +431,7 @@ position = Vector2(11, -2)
 shape = SubResource("CapsuleShape2D_6b5fw")
 
 [node name="Playbox Games" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_qgdcu")
+material = SubResource("ShaderMaterial_qgfpu")
 position = Vector2(254, 188)
 item_data = SubResource("Resource_58jol")
 
@@ -449,7 +443,7 @@ position = Vector2(-8, -1.5)
 shape = SubResource("RectangleShape2D_hqk10")
 
 [node name="Adventurer Figure" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_c2pda")
+material = SubResource("ShaderMaterial_2aomb")
 position = Vector2(370, -286)
 item_data = SubResource("Resource_h8g84")
 
@@ -461,7 +455,7 @@ position = Vector2(1, -3)
 shape = SubResource("RectangleShape2D_qc1vl")
 
 [node name="Friend and Miss Ern figures" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_w1w4t")
+material = SubResource("ShaderMaterial_l858k")
 position = Vector2(453, -291)
 item_data = SubResource("Resource_a5fns")
 
@@ -473,7 +467,7 @@ position = Vector2(6, -0.5)
 shape = SubResource("RectangleShape2D_dkhbe")
 
 [node name="Fate 2 Gun" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_8iu7t")
+material = SubResource("ShaderMaterial_5otpl")
 position = Vector2(480, -395)
 item_data = SubResource("Resource_jm2j8")
 
@@ -485,7 +479,7 @@ position = Vector2(-5, 3.5)
 shape = SubResource("RectangleShape2D_637ij")
 
 [node name="M&M books" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_2ir34")
+material = SubResource("ShaderMaterial_wv3pk")
 position = Vector2(629, 78)
 item_data = SubResource("Resource_0ypak")
 
@@ -497,7 +491,7 @@ position = Vector2(-25.5, -3)
 shape = SubResource("RectangleShape2D_u06qu")
 
 [node name="Eli\'s Gamepad" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_85smf")
+material = SubResource("ShaderMaterial_4f53j")
 position = Vector2(-115, 325)
 item_data = SubResource("Resource_vdm7d")
 
@@ -509,7 +503,7 @@ position = Vector2(-7, 8)
 shape = SubResource("CircleShape2D_ghd3f")
 
 [node name="Eli and Sam photo" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_r3liu")
+material = SubResource("ShaderMaterial_7faxs")
 position = Vector2(943, -95)
 item_data = SubResource("Resource_os8a6")
 
@@ -521,7 +515,7 @@ position = Vector2(-1, -4)
 shape = SubResource("RectangleShape2D_div70")
 
 [node name="Lama plushies" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_vl17g")
+material = SubResource("ShaderMaterial_kv30u")
 position = Vector2(1000, 108)
 item_data = SubResource("Resource_y31hn")
 
@@ -533,7 +527,7 @@ position = Vector2(28, 7)
 shape = SubResource("RectangleShape2D_h3bfp")
 
 [node name="Old Playbox" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_vtt25")
+material = SubResource("ShaderMaterial_hvqlm")
 position = Vector2(633, 259)
 item_data = SubResource("Resource_cx5na")
 
@@ -545,7 +539,7 @@ position = Vector2(-7.5, 7)
 shape = SubResource("RectangleShape2D_oo4ht")
 
 [node name="Reap Owl plushy" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_hbff1")
+material = SubResource("ShaderMaterial_v7t6i")
 position = Vector2(936, -315)
 item_data = SubResource("Resource_ijyha")
 
@@ -557,7 +551,7 @@ position = Vector2(6.5, -5.5)
 shape = SubResource("RectangleShape2D_7i28y")
 
 [node name="Records" parent="." instance=ExtResource("1_7pd75")]
-material = SubResource("ShaderMaterial_k111e")
+material = SubResource("ShaderMaterial_fuv0b")
 position = Vector2(838, 94)
 item_data = SubResource("Resource_hhi80")
 
