@@ -1,4 +1,4 @@
-[gd_scene load_steps=194 format=3 uid="uid://cx8gwlfthou1c"]
+[gd_scene load_steps=213 format=3 uid="uid://cx8gwlfthou1c"]
 
 [ext_resource type="PackedScene" uid="uid://dk57ntjj2h1ug" path="res://src/scenes/items/item.tscn" id="1_7pd75"]
 [ext_resource type="Texture2D" uid="uid://dqxvhrtnhn7xv" path="res://assets/sprites/room/front shelf.png" id="1_d3g6v"]
@@ -74,12 +74,12 @@ line_text = "I'll never understand why you like him so much."
 [sub_resource type="Resource" id="Resource_52hcd"]
 script = ExtResource("7_b0giy")
 said_by = "Eli"
-line_text = "Well, He's a loser and has tboy swag like no one else does. Besides his tragic backstory, that was enough for me."
+line_text = "Well, He's a loser with tboy swag like no one else. Besides his tragic backstory, that was enough for me."
 
 [sub_resource type="Resource" id="Resource_ggpj5"]
 script = ExtResource("7_b0giy")
 said_by = "Sam"
-line_text = "I can respect that. But also take this shrine with you. Please."
+line_text = "Okay. Take this shrine with you, though. Please."
 
 [sub_resource type="Resource" id="Resource_84vwp"]
 script = ExtResource("7_b0giy")
@@ -123,12 +123,12 @@ next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_1rwro")])
 [sub_resource type="Resource" id="Resource_j7jgi"]
 script = ExtResource("7_b0giy")
 said_by = "Sam"
-line_text = "The best among our other ducks."
+line_text = "The best in the entirety of our nerd corner."
 
 [sub_resource type="Resource" id="Resource_mqwq1"]
 script = ExtResource("8_kk5cd")
 option_text = "\"Yeah, this is the best duck.\""
-relationship_change = 0.5
+relationship_change = 0.0
 is_item_taken = false
 next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_j7jgi")])
 
@@ -188,17 +188,17 @@ line_text = "What?"
 [sub_resource type="Resource" id="Resource_fs35e"]
 script = ExtResource("7_b0giy")
 said_by = "Sam"
-line_text = "It's time to tell you the truth. One of these posters block a hole in the wall."
+line_text = "It's time to tell you the truth. One of these posters blocks a hole in the wall."
 
 [sub_resource type="Resource" id="Resource_qr2oi"]
 script = ExtResource("7_b0giy")
 said_by = "Eli"
-line_text = "Wow. Looks like it won't block it anymore, because I'm taking it with me."
+line_text = "Wow. Looks like I'm taking this poster with me."
 
 [sub_resource type="Resource" id="Resource_ixeny"]
 script = ExtResource("7_b0giy")
 said_by = "Sam"
-line_text = "You can't. I glued it so hard to the wall that it will make a bigger hole that the one before."
+line_text = "You can't. I glued it to the wall way too well."
 
 [sub_resource type="Resource" id="Resource_6a2mw"]
 script = ExtResource("7_b0giy")
@@ -207,7 +207,7 @@ line_text = "Ah."
 
 [sub_resource type="Resource" id="Resource_jthm2"]
 script = ExtResource("8_kk5cd")
-option_text = "\"My man.\" Give them a pat on the back."
+option_text = "\"Good job.\" Give them a pat on the back."
 relationship_change = 1.0
 is_item_taken = false
 next_lines = Array[ExtResource("7_b0giy")]([])
@@ -283,7 +283,7 @@ next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_wp1r5"), SubRe
 script = ExtResource("9_68q71")
 options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_0ppqy"), SubResource("Resource_62en8")])
 said_by = "Sam"
-line_text = "The other posters are fine. Just don't take Claus and the abstract one."
+line_text = "The other posters are fine. Just don't take Claus."
 
 [sub_resource type="Resource" id="Resource_6reia"]
 script = ExtResource("7_amljd")
@@ -342,7 +342,7 @@ line_text = "This will be a perfect lesson for my future children."
 [sub_resource type="Resource" id="Resource_aipck"]
 script = ExtResource("7_b0giy")
 said_by = "Sam"
-line_text = "Buy cool stuff no matter the cost?"
+line_text = "The lesson being \"buy cool stuff no matter the cost?\""
 
 [sub_resource type="Resource" id="Resource_4wube"]
 script = ExtResource("7_b0giy")
@@ -352,14 +352,19 @@ line_text = "No!"
 [sub_resource type="Resource" id="Resource_d4720"]
 script = ExtResource("7_b0giy")
 said_by = "Eli"
-line_text = "Actually, I don't think I will even have kids. But I also don't have to explain myself."
+line_text = "Actually, I don't think I will even have kids. But I also don't have to explain myself here."
+
+[sub_resource type="Resource" id="Resource_clu5x"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "It's cool."
 
 [sub_resource type="Resource" id="Resource_l7med"]
 script = ExtResource("8_kk5cd")
 option_text = "Take it"
-relationship_change = -1.0
+relationship_change = 0.0
 is_item_taken = true
-next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_kofr7"), SubResource("Resource_aipck"), SubResource("Resource_4wube"), SubResource("Resource_d4720")])
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_kofr7"), SubResource("Resource_aipck"), SubResource("Resource_4wube"), SubResource("Resource_d4720"), SubResource("Resource_clu5x")])
 
 [sub_resource type="Resource" id="Resource_lqnsb"]
 script = ExtResource("7_b0giy")
@@ -369,7 +374,7 @@ line_text = "It belongs here. "
 [sub_resource type="Resource" id="Resource_gtr5g"]
 script = ExtResource("7_b0giy")
 said_by = "Sam"
-line_text = "It does. Our shame."
+line_text = "It does. It's our shame."
 
 [sub_resource type="Resource" id="Resource_bbdux"]
 script = ExtResource("7_b0giy")
@@ -379,7 +384,7 @@ line_text = "And glory."
 [sub_resource type="Resource" id="Resource_8uu1n"]
 script = ExtResource("7_b0giy")
 said_by = "Sam"
-line_text = "And wasted opportunity to use 1000 dollars for something worth these money."
+line_text = "And wasted opportunity to use 1000 dollars for something else."
 
 [sub_resource type="Resource" id="Resource_vbnb5"]
 script = ExtResource("8_kk5cd")
@@ -731,6 +736,10 @@ item_collision = SubResource("RectangleShape2D_hqk10")
 item_name = "Playbox Games"
 item_description = ""
 
+[sub_resource type="Resource" id="Resource_nhoi2"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([])
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e8p7t"]
 resource_local_to_scene = true
 shader = ExtResource("4_sgcbm")
@@ -749,7 +758,76 @@ item_texture = ExtResource("12_tpie6")
 item_closeup_texture = ExtResource("23_thq7q")
 item_collision = SubResource("RectangleShape2D_qc1vl")
 item_name = "Adventurer Figure"
-item_description = ""
+item_description = "A figure of your favorute character. He looks like he plots something."
+
+[sub_resource type="Resource" id="Resource_1y0ba"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Now, another question. Why isn't this with your shrine?"
+
+[sub_resource type="Resource" id="Resource_q8le8"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "He's with his friends."
+
+[sub_resource type="Resource" id="Resource_8m5lc"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Thought he didn't have any friends."
+
+[sub_resource type="Resource" id="Resource_hpfoa"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Well at the time of this party - no. But new lore says that he's more gentle now. More friendly."
+
+[sub_resource type="Resource" id="Resource_g8r8i"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Okay, maybe I didn't play new seasons and that's why I had another picure in mind."
+
+[sub_resource type="Resource" id="Resource_iotca"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Perhaps."
+
+[sub_resource type="Resource" id="Resource_gvr2x"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Farewell, Adventurer."
+
+[sub_resource type="Resource" id="Resource_7dpek"]
+script = ExtResource("8_kk5cd")
+option_text = "\"I'll take him with me.\""
+relationship_change = 1.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_gvr2x")])
+
+[sub_resource type="Resource" id="Resource_bpkyr"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "It doesn't make any sense."
+
+[sub_resource type="Resource" id="Resource_m0qqn"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Sometimes it shouldn't."
+
+[sub_resource type="Resource" id="Resource_vb4tu"]
+script = ExtResource("8_kk5cd")
+option_text = "\"Tha'ts why he stays.\""
+relationship_change = 0.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_bpkyr"), SubResource("Resource_m0qqn")])
+
+[sub_resource type="Resource" id="Resource_wc36i"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_7dpek"), SubResource("Resource_vb4tu")])
+said_by = "Sam"
+line_text = "If you leave him here, it will be kinda weird."
+
+[sub_resource type="Resource" id="Resource_kbvf6"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_1y0ba"), SubResource("Resource_q8le8"), SubResource("Resource_8m5lc"), SubResource("Resource_hpfoa"), SubResource("Resource_g8r8i"), SubResource("Resource_iotca"), SubResource("Resource_wc36i")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tyjwp"]
 resource_local_to_scene = true
@@ -769,7 +847,26 @@ item_texture = ExtResource("13_6mbf6")
 item_closeup_texture = ExtResource("25_41glf")
 item_collision = SubResource("RectangleShape2D_dkhbe")
 item_name = "Friend and Miss Ern figures"
-item_description = ""
+item_description = "The rest of the Adventurer's latest group. Sam likes them both."
+
+[sub_resource type="Resource" id="Resource_8d6y7"]
+script = ExtResource("7_b0giy")
+said_by = ""
+line_text = ""
+
+[sub_resource type="Resource" id="Resource_j7uo4"]
+script = ExtResource("7_b0giy")
+said_by = ""
+line_text = ""
+
+[sub_resource type="Resource" id="Resource_sho73"]
+script = ExtResource("7_b0giy")
+said_by = ""
+line_text = ""
+
+[sub_resource type="Resource" id="Resource_r1ufs"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_8d6y7"), SubResource("Resource_j7uo4"), SubResource("Resource_sho73")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_16lgg"]
 resource_local_to_scene = true
@@ -976,16 +1073,19 @@ item_dialog = SubResource("Resource_ex3tx")
 material = SubResource("ShaderMaterial_1p3bt")
 position = Vector2(254, 188)
 item_data = SubResource("Resource_58jol")
+item_dialog = SubResource("Resource_nhoi2")
 
 [node name="Adventurer Figure" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_e8p7t")
 position = Vector2(370, -286)
 item_data = SubResource("Resource_h8g84")
+item_dialog = SubResource("Resource_kbvf6")
 
 [node name="Friend and Miss Ern figures" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_tyjwp")
 position = Vector2(453, -291)
 item_data = SubResource("Resource_a5fns")
+item_dialog = SubResource("Resource_r1ufs")
 
 [node name="Fate 2 Gun" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_16lgg")
