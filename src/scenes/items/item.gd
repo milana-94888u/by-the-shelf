@@ -21,7 +21,8 @@ extends Area2D
 
 
 func _enter_tree() -> void:
-	RelationshipManager.register_item(self)
+	if not Engine.is_editor_hint():
+		RelationshipManager.register_item(self)
 
 
 func set_active() -> void:

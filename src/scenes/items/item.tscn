@@ -1,18 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk57ntjj2h1ug"]
+[gd_scene load_steps=5 format=3 uid="uid://dk57ntjj2h1ug"]
 
 [ext_resource type="Script" path="res://src/scenes/items/item.gd" id="1_3r527"]
-[ext_resource type="Shader" path="res://src/scenes/items/item_outline.gdshader" id="1_qoork"]
 [ext_resource type="Script" path="res://src/resources/item_data.gd" id="3_sijgi"]
 [ext_resource type="PackedScene" uid="uid://dhraq5wuj21ex" path="res://src/scenes/ui/dialog/dialog.tscn" id="4_cy45v"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_es12h"]
-resource_local_to_scene = true
-shader = ExtResource("1_qoork")
-shader_parameter/color = Color(1, 1, 1, 1)
-shader_parameter/width = 4.0
-shader_parameter/pattern = 0
-shader_parameter/inside = true
-shader_parameter/enabled = false
 
 [sub_resource type="Resource" id="Resource_xrtc3"]
 script = ExtResource("3_sijgi")
@@ -20,7 +10,6 @@ item_name = ""
 item_description = ""
 
 [node name="Item" type="Area2D"]
-material = SubResource("ShaderMaterial_es12h")
 collision_mask = 0
 monitoring = false
 monitorable = false
