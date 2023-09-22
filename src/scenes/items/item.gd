@@ -20,6 +20,10 @@ extends Area2D
 @export var item_dialog: ItemDialog
 
 
+func _ready() -> void:
+	item_data.changed.connect(set.bind("item_data", item_data))
+
+
 func _enter_tree() -> void:
 	if not Engine.is_editor_hint():
 		RelationshipManager.register_item(self)

@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccftig6hopdso"]
+
+[ext_resource type="Script" path="res://src/scenes/ui/intro/intro.gd" id="1_0ibgg"]
+[ext_resource type="PackedScene" uid="uid://cx8gwlfthou1c" path="res://src/scenes/room/room.tscn" id="2_pfk0j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0s35v"]
+content_margin_left = 12.0
+content_margin_right = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w02rq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_4uypa"]
+default_font_size = 64
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/styles/normal = SubResource("StyleBoxEmpty_0s35v")
+Panel/styles/panel = SubResource("StyleBoxFlat_w02rq")
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4uypa")
+script = ExtResource("1_0ibgg")
+next_scene = ExtResource("2_pfk0j")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.960784, 0.870588, 0.701961, 1)
+
+[node name="FirstLabel" type="Label" parent="."]
+visible = false
+custom_minimum_size = Vector2(1440, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -720.0
+offset_top = -136.5
+offset_right = 720.0
+offset_bottom = 136.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Your name is Eli. You've been living with your friend Sam in this house for a while.
+But now it's time to move to your partner."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SecondLabel" type="Label" parent="."]
+visible = false
+custom_minimum_size = Vector2(1840, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -920.0
+offset_top = -136.5
+offset_right = 920.0
+offset_bottom = 136.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You've already moved most of your things, but there's that one Shelf in your living room that has thing that are yours and Sam's."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ThirdLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(1440, 512)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -720.0
+offset_top = -200.0
+offset_right = 720.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You both have to decide what you can take with you and what has to be left behind."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="ThirdLabel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -742.0
+offset_top = 353.0
+offset_right = 399.0
+offset_bottom = 444.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "We recommend to play in fullscreen"
