@@ -1,4 +1,4 @@
-[gd_scene load_steps=213 format=3 uid="uid://cx8gwlfthou1c"]
+[gd_scene load_steps=320 format=3 uid="uid://cx8gwlfthou1c"]
 
 [ext_resource type="PackedScene" uid="uid://dk57ntjj2h1ug" path="res://src/scenes/items/item.tscn" id="1_7pd75"]
 [ext_resource type="Texture2D" uid="uid://dqxvhrtnhn7xv" path="res://assets/sprites/room/front shelf.png" id="1_d3g6v"]
@@ -710,7 +710,7 @@ next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_803gm"), SubRe
 script = ExtResource("9_68q71")
 options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_8n31u"), SubResource("Resource_hm0m7")])
 said_by = "Sam"
-line_text = "Anyway. Do you want to take him? For you lama family?"
+line_text = "Anyway. Do you want to take him? For your lama family?"
 
 [sub_resource type="Resource" id="Resource_ex3tx"]
 script = ExtResource("7_amljd")
@@ -734,11 +734,96 @@ item_texture = ExtResource("11_psmt1")
 item_closeup_texture = ExtResource("21_jk7ai")
 item_collision = SubResource("RectangleShape2D_hqk10")
 item_name = "Playbox Games"
-item_description = ""
+item_description = "Disks of your favourite games. You like collecting physical versions of them."
+
+[sub_resource type="Resource" id="Resource_5jmch"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "I think, you can take some."
+
+[sub_resource type="Resource" id="Resource_7kre4"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Which ones?"
+
+[sub_resource type="Resource" id="Resource_m8cx4"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Let's see... Infamy, Angel May Kill 5, God of All 3 and..."
+
+[sub_resource type="Resource" id="Resource_6aw1j"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "80's Oblivion?"
+
+[sub_resource type="Resource" id="Resource_rywt0"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Yep. You can take them. You like them best."
+
+[sub_resource type="Resource" id="Resource_04l8k"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Wasn't the Infamy your favourite?"
+
+[sub_resource type="Resource" id="Resource_8sgvs"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "That's why I'm giving you only the first game. Infamy 2 will be with me."
+
+[sub_resource type="Resource" id="Resource_0683g"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "How clever."
+
+[sub_resource type="Resource" id="Resource_sjwyl"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Good luck and have fun."
+
+[sub_resource type="Resource" id="Resource_6ool2"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Will do."
+
+[sub_resource type="Resource" id="Resource_u4p6v"]
+script = ExtResource("8_kk5cd")
+option_text = "Take them"
+relationship_change = 1.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_sjwyl"), SubResource("Resource_6ool2")])
+
+[sub_resource type="Resource" id="Resource_jphvu"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Oh, you don't want them?"
+
+[sub_resource type="Resource" id="Resource_7pg7i"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "I have them on Smoke account anyway."
+
+[sub_resource type="Resource" id="Resource_s73do"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Well, alright."
+
+[sub_resource type="Resource" id="Resource_k1oo1"]
+script = ExtResource("8_kk5cd")
+option_text = "Leave them"
+relationship_change = 0.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_jphvu"), SubResource("Resource_7pg7i"), SubResource("Resource_s73do")])
+
+[sub_resource type="Resource" id="Resource_cjhe6"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_u4p6v"), SubResource("Resource_k1oo1")])
+said_by = ""
+line_text = "Do you want to take these games?"
 
 [sub_resource type="Resource" id="Resource_nhoi2"]
 script = ExtResource("7_amljd")
-lines = Array[ExtResource("7_b0giy")]([])
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_5jmch"), SubResource("Resource_7kre4"), SubResource("Resource_m8cx4"), SubResource("Resource_6aw1j"), SubResource("Resource_rywt0"), SubResource("Resource_04l8k"), SubResource("Resource_8sgvs"), SubResource("Resource_0683g"), SubResource("Resource_cjhe6")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e8p7t"]
 resource_local_to_scene = true
@@ -778,17 +863,17 @@ line_text = "Thought he didn't have any friends."
 [sub_resource type="Resource" id="Resource_hpfoa"]
 script = ExtResource("7_b0giy")
 said_by = "Eli"
-line_text = "Well at the time of this party - no. But new lore says that he's more gentle now. More friendly."
+line_text = "Well, at the time of this party - no. But new lore says that he's more gentle now. More friendly."
 
 [sub_resource type="Resource" id="Resource_g8r8i"]
 script = ExtResource("7_b0giy")
 said_by = "Sam"
-line_text = "Okay, maybe I didn't play new seasons and that's why I had another picure in mind."
+line_text = "Oh, I didn't play Fate lately. If he has friends now, good for him."
 
 [sub_resource type="Resource" id="Resource_iotca"]
 script = ExtResource("7_b0giy")
 said_by = "Eli"
-line_text = "Perhaps."
+line_text = "You should catch up sometime."
 
 [sub_resource type="Resource" id="Resource_gvr2x"]
 script = ExtResource("7_b0giy")
@@ -814,7 +899,7 @@ line_text = "Sometimes it shouldn't."
 
 [sub_resource type="Resource" id="Resource_vb4tu"]
 script = ExtResource("8_kk5cd")
-option_text = "\"Tha'ts why he stays.\""
+option_text = "\"That's why he stays.\""
 relationship_change = 0.0
 is_item_taken = false
 next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_bpkyr"), SubResource("Resource_m0qqn")])
@@ -851,22 +936,42 @@ item_description = "The rest of the Adventurer's latest group. Sam likes them bo
 
 [sub_resource type="Resource" id="Resource_8d6y7"]
 script = ExtResource("7_b0giy")
-said_by = ""
-line_text = ""
+said_by = "Eli"
+line_text = "These figures are really well made. The Ern one especially."
 
 [sub_resource type="Resource" id="Resource_j7uo4"]
 script = ExtResource("7_b0giy")
-said_by = ""
-line_text = ""
+said_by = "Sam"
+line_text = "Is it because you made it?"
 
 [sub_resource type="Resource" id="Resource_sho73"]
 script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Maybe."
+
+[sub_resource type="Resource" id="Resource_6trui"]
+script = ExtResource("8_kk5cd")
+option_text = "Take them"
+relationship_change = -0.5
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([])
+
+[sub_resource type="Resource" id="Resource_vch6i"]
+script = ExtResource("8_kk5cd")
+option_text = "Leave them here"
+relationship_change = 0.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([])
+
+[sub_resource type="Resource" id="Resource_drf8j"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_6trui"), SubResource("Resource_vch6i")])
 said_by = ""
-line_text = ""
+line_text = "Do you want to take them with you?"
 
 [sub_resource type="Resource" id="Resource_r1ufs"]
 script = ExtResource("7_amljd")
-lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_8d6y7"), SubResource("Resource_j7uo4"), SubResource("Resource_sho73")])
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_8d6y7"), SubResource("Resource_j7uo4"), SubResource("Resource_sho73"), SubResource("Resource_drf8j")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_16lgg"]
 resource_local_to_scene = true
@@ -885,8 +990,87 @@ script = ExtResource("6_tp2ly")
 item_texture = ExtResource("14_mv2g4")
 item_closeup_texture = ExtResource("27_jir66")
 item_collision = SubResource("RectangleShape2D_637ij")
-item_name = "Fate 2 Gun"
-item_description = ""
+item_name = "Atrocity gun"
+item_description = "This is another Fate 2 item. It was built by Adventurer and the player. Both being your favorite characters."
+
+[sub_resource type="Resource" id="Resource_vuyqb"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Oh, man, this thing is old it's even left a spot on the wall."
+
+[sub_resource type="Resource" id="Resource_mte36"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "The Ace of Cross left it, too."
+
+[sub_resource type="Resource" id="Resource_oexkb"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "We shouldn't be surprised, really. These are The first IRL gifts we made. Were they babies, they’d go to school by now."
+
+[sub_resource type="Resource" id="Resource_ct3ei"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "I’m taking Atrocity into the divorce."
+
+[sub_resource type="Resource" id="Resource_p08qt"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "No-o-o, what could I do?"
+
+[sub_resource type="Resource" id="Resource_f50g1"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Visit it on weekends at my home. Don’t forget to bring some popcorn."
+
+[sub_resource type="Resource" id="Resource_xev4u"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "See ya there, Atrocity. Eli."
+
+[sub_resource type="Resource" id="Resource_t24vi"]
+script = ExtResource("8_kk5cd")
+option_text = "Take it"
+relationship_change = 0.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_ct3ei"), SubResource("Resource_p08qt"), SubResource("Resource_f50g1"), SubResource("Resource_xev4u")])
+
+[sub_resource type="Resource" id="Resource_xichx"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "I won’t separate them."
+
+[sub_resource type="Resource" id="Resource_dlcke"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Okay. It looks better on our wall anyway."
+
+[sub_resource type="Resource" id="Resource_idh1b"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Also doesn’t show that Atrocity left a spot on the wall. You’ll have less things to clean."
+
+[sub_resource type="Resource" id="Resource_4syhr"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Nice."
+
+[sub_resource type="Resource" id="Resource_8f5u4"]
+script = ExtResource("8_kk5cd")
+option_text = "Leave it"
+relationship_change = 0.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_xichx"), SubResource("Resource_dlcke"), SubResource("Resource_idh1b"), SubResource("Resource_4syhr")])
+
+[sub_resource type="Resource" id="Resource_mfjth"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_t24vi"), SubResource("Resource_8f5u4")])
+said_by = "Sam"
+line_text = "Now I just feel old."
+
+[sub_resource type="Resource" id="Resource_xfp85"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_vuyqb"), SubResource("Resource_mte36"), SubResource("Resource_oexkb"), SubResource("Resource_mfjth")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qipaq"]
 resource_local_to_scene = true
@@ -905,7 +1089,66 @@ script = ExtResource("6_tp2ly")
 item_texture = ExtResource("15_ngvu6")
 item_collision = SubResource("RectangleShape2D_u06qu")
 item_name = "M&M books"
-item_description = ""
+item_description = "Your Mountains and Monsters books. Also a folder for your DMing. "
+
+[sub_resource type="Resource" id="Resource_a40uc"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Can't wait for our next one-shot."
+
+[sub_resource type="Resource" id="Resource_tt50l"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Me too, dude."
+
+[sub_resource type="Resource" id="Resource_1uksb"]
+script = ExtResource("8_kk5cd")
+option_text = "\"Yeah, can't go anywhere without it.\""
+relationship_change = 1.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_a40uc"), SubResource("Resource_tt50l")])
+
+[sub_resource type="Resource" id="Resource_usv2p"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "What."
+
+[sub_resource type="Resource" id="Resource_hmu60"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "I'm kidding. I'm taking it with me."
+
+[sub_resource type="Resource" id="Resource_lo5k5"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Okay, I was scared for a second."
+
+[sub_resource type="Resource" id="Resource_y70gt"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "You should be."
+
+[sub_resource type="Resource" id="Resource_e0xi0"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Please, don't kill my character."
+
+[sub_resource type="Resource" id="Resource_a0qt2"]
+script = ExtResource("8_kk5cd")
+option_text = "\"Be their DM.\" "
+relationship_change = 0.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_usv2p"), SubResource("Resource_hmu60"), SubResource("Resource_lo5k5"), SubResource("Resource_y70gt"), SubResource("Resource_e0xi0")])
+
+[sub_resource type="Resource" id="Resource_ior8o"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_1uksb"), SubResource("Resource_a0qt2")])
+said_by = "Sam"
+line_text = "Yep. This one should definitely be with you, DM."
+
+[sub_resource type="Resource" id="Resource_hyfqs"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_ior8o")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n8o4l"]
 resource_local_to_scene = true
@@ -925,7 +1168,81 @@ item_texture = ExtResource("16_7myrp")
 item_closeup_texture = ExtResource("30_0gl3g")
 item_collision = SubResource("CircleShape2D_ghd3f")
 item_name = "Eli's Gamepad"
-item_description = ""
+item_description = "You customized it yourself. It's so much cuter now."
+
+[sub_resource type="Resource" id="Resource_ddynf"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "I'll miss you, crying gamepad."
+
+[sub_resource type="Resource" id="Resource_80d0a"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "What? It's not crying."
+
+[sub_resource type="Resource" id="Resource_q4gef"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "The sticks make it look like a sad cat."
+
+[sub_resource type="Resource" id="Resource_xsp7e"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "No, they don't."
+
+[sub_resource type="Resource" id="Resource_abd60"]
+script = ExtResource("7_b0giy")
+said_by = ""
+line_text = "They do make it look like it's crying. In a way."
+
+[sub_resource type="Resource" id="Resource_kcf7v"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Bye, crying cat."
+
+[sub_resource type="Resource" id="Resource_gwx5i"]
+script = ExtResource("8_kk5cd")
+option_text = "Take it"
+relationship_change = 0.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_kcf7v")])
+
+[sub_resource type="Resource" id="Resource_lvj5d"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "It will still be here."
+
+[sub_resource type="Resource" id="Resource_hxpa5"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Huh. Okay. You don't have a playbox there?"
+
+[sub_resource type="Resource" id="Resource_5yte4"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "I do, it just feels right to leave this sad cat here."
+
+[sub_resource type="Resource" id="Resource_pjkbf"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Interesting choice."
+
+[sub_resource type="Resource" id="Resource_a41as"]
+script = ExtResource("8_kk5cd")
+option_text = "Leave it here"
+relationship_change = 0.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_lvj5d"), SubResource("Resource_hxpa5"), SubResource("Resource_5yte4"), SubResource("Resource_pjkbf")])
+
+[sub_resource type="Resource" id="Resource_2ry6n"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_gwx5i"), SubResource("Resource_a41as")])
+said_by = ""
+line_text = "Are you taking the crying cat gamepad with you?"
+
+[sub_resource type="Resource" id="Resource_t5idn"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_ddynf"), SubResource("Resource_80d0a"), SubResource("Resource_q4gef"), SubResource("Resource_xsp7e"), SubResource("Resource_abd60"), SubResource("Resource_2ry6n")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ei53v"]
 resource_local_to_scene = true
@@ -945,7 +1262,86 @@ item_texture = ExtResource("17_hoqgi")
 item_closeup_texture = ExtResource("32_xndeo")
 item_collision = SubResource("RectangleShape2D_div70")
 item_name = "Eli and Sam photo"
-item_description = ""
+item_description = "Photo of you and Sam. It's pretty old."
+
+[sub_resource type="Resource" id="Resource_pd7t2"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "This was my magnum opus of gender euphoria here before the transition."
+
+[sub_resource type="Resource" id="Resource_wxncq"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Good idea."
+
+[sub_resource type="Resource" id="Resource_xcxat"]
+script = ExtResource("8_kk5cd")
+option_text = "\"We should make a new one later.\""
+relationship_change = 1.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_wxncq")])
+
+[sub_resource type="Resource" id="Resource_ysddb"]
+script = ExtResource("8_kk5cd")
+option_text = "\"It's crazy how time flies.\""
+relationship_change = 0.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([])
+
+[sub_resource type="Resource" id="Resource_w8rla"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_xcxat"), SubResource("Resource_ysddb")])
+said_by = "Eli"
+line_text = "Oh, right! It's THAT old. And you have a beard now..."
+
+[sub_resource type="Resource" id="Resource_57uve"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Sacred picture."
+
+[sub_resource type="Resource" id="Resource_p5rfq"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Of ancient times."
+
+[sub_resource type="Resource" id="Resource_u8o4l"]
+script = ExtResource("8_kk5cd")
+option_text = "Take it"
+relationship_change = 0.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_57uve"), SubResource("Resource_p5rfq")])
+
+[sub_resource type="Resource" id="Resource_xi1a8"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "Nah. It will be here."
+
+[sub_resource type="Resource" id="Resource_rtobe"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "YYour choice."
+
+[sub_resource type="Resource" id="Resource_soil5"]
+script = ExtResource("7_b0giy")
+said_by = ""
+line_text = "Sam looks gratetful."
+
+[sub_resource type="Resource" id="Resource_hgn3b"]
+script = ExtResource("8_kk5cd")
+option_text = "Leave it"
+relationship_change = 1.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_xi1a8"), SubResource("Resource_rtobe"), SubResource("Resource_soil5")])
+
+[sub_resource type="Resource" id="Resource_rbnri"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_u8o4l"), SubResource("Resource_hgn3b")])
+said_by = "Sam"
+line_text = "You can take this one with you for now. If you want."
+
+[sub_resource type="Resource" id="Resource_pnvmu"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_pd7t2"), SubResource("Resource_w8rla"), SubResource("Resource_rbnri")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_agugn"]
 resource_local_to_scene = true
@@ -964,7 +1360,51 @@ script = ExtResource("6_tp2ly")
 item_texture = ExtResource("21_qdteu")
 item_collision = SubResource("RectangleShape2D_rit85")
 item_name = "Records"
-item_description = ""
+item_description = "Your favorite music but make it expensive."
+
+[sub_resource type="Resource" id="Resource_i508f"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Take it. It's yours. I don't listen to them."
+
+[sub_resource type="Resource" id="Resource_sokce"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "You sure?"
+
+[sub_resource type="Resource" id="Resource_7yuoe"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Yes."
+
+[sub_resource type="Resource" id="Resource_0ecqn"]
+script = ExtResource("8_kk5cd")
+option_text = "Take the records"
+relationship_change = 0.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([])
+
+[sub_resource type="Resource" id="Resource_pn8jw"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Hm-m-m. You can leave this one with me."
+
+[sub_resource type="Resource" id="Resource_5juqf"]
+script = ExtResource("8_kk5cd")
+option_text = "\"Even the Pina Colada song?\""
+relationship_change = 1.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_pn8jw")])
+
+[sub_resource type="Resource" id="Resource_g60et"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_0ecqn"), SubResource("Resource_5juqf")])
+said_by = ""
+line_text = "Sam doesn't look sure."
+
+[sub_resource type="Resource" id="Resource_6tryx"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_i508f"), SubResource("Resource_sokce"), SubResource("Resource_7yuoe"), SubResource("Resource_g60et")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u465q"]
 resource_local_to_scene = true
@@ -984,7 +1424,51 @@ item_texture = ExtResource("18_8pda0")
 item_closeup_texture = ExtResource("35_jg0qs")
 item_collision = SubResource("RectangleShape2D_h3bfp")
 item_name = "Lama plushies"
-item_description = ""
+item_description = "You bought them many years ago."
+
+[sub_resource type="Resource" id="Resource_fsqis"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "The Beauty and the Beast."
+
+[sub_resource type="Resource" id="Resource_klj2t"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "I love them so much."
+
+[sub_resource type="Resource" id="Resource_cq7vo"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "I know."
+
+[sub_resource type="Resource" id="Resource_m1c5c"]
+script = ExtResource("8_kk5cd")
+option_text = "Take them"
+relationship_change = 1.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([])
+
+[sub_resource type="Resource" id="Resource_qmla4"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "They're just gonna vibe here for the rest of their lives."
+
+[sub_resource type="Resource" id="Resource_62boa"]
+script = ExtResource("8_kk5cd")
+option_text = "Leave them"
+relationship_change = 0.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_qmla4")])
+
+[sub_resource type="Resource" id="Resource_rywgb"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_m1c5c"), SubResource("Resource_62boa")])
+said_by = ""
+line_text = "Do you want to take them?"
+
+[sub_resource type="Resource" id="Resource_ccbys"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_fsqis"), SubResource("Resource_klj2t"), SubResource("Resource_cq7vo"), SubResource("Resource_rywgb")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wbo7b"]
 resource_local_to_scene = true
@@ -1003,7 +1487,61 @@ script = ExtResource("6_tp2ly")
 item_texture = ExtResource("19_ly18v")
 item_collision = SubResource("RectangleShape2D_oo4ht")
 item_name = "Old Playbox"
-item_description = ""
+item_description = "Sam's old playbox. It's thousands years old. Probably."
+
+[sub_resource type="Resource" id="Resource_bmx3e"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "You can take it, if you want to. Like a trophy."
+
+[sub_resource type="Resource" id="Resource_yg1eb"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "But it's yours."
+
+[sub_resource type="Resource" id="Resource_jujf5"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "That means a lot... Thank you."
+
+[sub_resource type="Resource" id="Resource_gfyr6"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "No problem."
+
+[sub_resource type="Resource" id="Resource_sw2i7"]
+script = ExtResource("8_kk5cd")
+option_text = "Take it"
+relationship_change = 1.0
+is_item_taken = true
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_jujf5"), SubResource("Resource_gfyr6")])
+
+[sub_resource type="Resource" id="Resource_5bcfx"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "I don't really need it. But thank you."
+
+[sub_resource type="Resource" id="Resource_udlgm"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Okay then."
+
+[sub_resource type="Resource" id="Resource_i1s5n"]
+script = ExtResource("8_kk5cd")
+option_text = "Leave it"
+relationship_change = 0.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_5bcfx"), SubResource("Resource_udlgm")])
+
+[sub_resource type="Resource" id="Resource_x2igw"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_sw2i7"), SubResource("Resource_i1s5n")])
+said_by = "Sam"
+line_text = "If it wasn't mine, I wouldn't suggest you to take it."
+
+[sub_resource type="Resource" id="Resource_tstg1"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_bmx3e"), SubResource("Resource_yg1eb"), SubResource("Resource_x2igw")])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t3dqv"]
 resource_local_to_scene = true
@@ -1023,7 +1561,51 @@ item_texture = ExtResource("20_xnot1")
 item_closeup_texture = ExtResource("38_qcrmu")
 item_collision = SubResource("RectangleShape2D_7i28y")
 item_name = "Reap Owl plushy"
-item_description = ""
+item_description = "Sam’s favorite Overcraft plushie. It’s ominous at nighttime. "
+
+[sub_resource type="Resource" id="Resource_fwr45"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "No-o-o, my baby!"
+
+[sub_resource type="Resource" id="Resource_3bol3"]
+script = ExtResource("7_b0giy")
+said_by = ""
+line_text = "You put it back on the shelf."
+
+[sub_resource type="Resource" id="Resource_yv083"]
+script = ExtResource("7_b0giy")
+said_by = "Eli"
+line_text = "It's okay, I wouldn't"
+
+[sub_resource type="Resource" id="Resource_mn4d4"]
+script = ExtResource("7_b0giy")
+said_by = "Sam"
+line_text = "Oh, thank god."
+
+[sub_resource type="Resource" id="Resource_kwxwm"]
+script = ExtResource("8_kk5cd")
+option_text = "Jokingly put it in the box"
+relationship_change = -1.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_fwr45"), SubResource("Resource_3bol3"), SubResource("Resource_yv083"), SubResource("Resource_mn4d4")])
+
+[sub_resource type="Resource" id="Resource_rdojw"]
+script = ExtResource("8_kk5cd")
+option_text = "\"I know\" Leave it be"
+relationship_change = 0.0
+is_item_taken = false
+next_lines = Array[ExtResource("7_b0giy")]([])
+
+[sub_resource type="Resource" id="Resource_ya41u"]
+script = ExtResource("9_68q71")
+options = Array[ExtResource("8_kk5cd")]([SubResource("Resource_kwxwm"), SubResource("Resource_rdojw")])
+said_by = "Sam"
+line_text = "Don't you dare, Eli. He's mine."
+
+[sub_resource type="Resource" id="Resource_go34e"]
+script = ExtResource("7_amljd")
+lines = Array[ExtResource("7_b0giy")]([SubResource("Resource_ya41u")])
 
 [node name="Room" type="Node2D"]
 position = Vector2(1280, 720)
@@ -1091,41 +1673,49 @@ item_dialog = SubResource("Resource_r1ufs")
 material = SubResource("ShaderMaterial_16lgg")
 position = Vector2(480, -395)
 item_data = SubResource("Resource_jm2j8")
+item_dialog = SubResource("Resource_xfp85")
 
 [node name="M&M books" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_qipaq")
 position = Vector2(629, 78)
 item_data = SubResource("Resource_0ypak")
+item_dialog = SubResource("Resource_hyfqs")
 
 [node name="Eli\'s Gamepad" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_n8o4l")
 position = Vector2(-115, 325)
 item_data = SubResource("Resource_vdm7d")
+item_dialog = SubResource("Resource_t5idn")
 
 [node name="Eli and Sam photo" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_ei53v")
 position = Vector2(943, -95)
 item_data = SubResource("Resource_os8a6")
+item_dialog = SubResource("Resource_pnvmu")
 
 [node name="Records" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_agugn")
 position = Vector2(838, 94)
 item_data = SubResource("Resource_hhi80")
+item_dialog = SubResource("Resource_6tryx")
 
 [node name="Lama plushies" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_u465q")
 position = Vector2(1000, 108)
 item_data = SubResource("Resource_y31hn")
+item_dialog = SubResource("Resource_ccbys")
 
 [node name="Old Playbox" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_wbo7b")
 position = Vector2(633, 259)
 item_data = SubResource("Resource_cx5na")
+item_dialog = SubResource("Resource_tstg1")
 
 [node name="Reap Owl plushy" parent="Items" instance=ExtResource("1_7pd75")]
 material = SubResource("ShaderMaterial_t3dqv")
 position = Vector2(936, -315)
 item_data = SubResource("Resource_ijyha")
+item_dialog = SubResource("Resource_go34e")
 
 [node name="Front shelf" type="Sprite2D" parent="."]
 texture = ExtResource("1_d3g6v")
