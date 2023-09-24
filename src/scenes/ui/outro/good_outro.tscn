@@ -1,0 +1,73 @@
+[gd_scene load_steps=13 format=3 uid="uid://bnlyem2f48sv2"]
+
+[ext_resource type="PackedScene" uid="uid://ccftig6hopdso" path="res://src/scenes/ui/intro/intro.tscn" id="1_dnr2x"]
+[ext_resource type="PackedScene" uid="uid://bedwthkwrror3" path="res://src/scenes/ui/game_end_screen/game_end_screen.tscn" id="2_8uw8f"]
+[ext_resource type="Script" path="res://src/resources/intro_dialog_line.gd" id="2_agxhr"]
+[ext_resource type="Texture2D" uid="uid://decolgqw2xs2a" path="res://assets/sprites/endings/good ending.png" id="2_rkw0c"]
+
+[sub_resource type="Resource" id="Resource_l6aew"]
+script = ExtResource("2_agxhr")
+said_by = "Eli"
+line_text = "Okay, I've got everything together, I think. "
+
+[sub_resource type="Resource" id="Resource_xxmyy"]
+script = ExtResource("2_agxhr")
+said_by = "Sam"
+line_text = "Still can't believe you're going. It will be so awkward without you here. "
+
+[sub_resource type="Resource" id="Resource_llscu"]
+script = ExtResource("2_agxhr")
+said_by = "Eli"
+line_text = "We still can hang out, I can still visit. We're going to be alright. "
+
+[sub_resource type="Resource" id="Resource_07mo1"]
+script = ExtResource("2_agxhr")
+said_by = "Sam"
+line_text = "Yeah. "
+
+[sub_resource type="Resource" id="Resource_b1wda"]
+script = ExtResource("2_agxhr")
+said_by = "Eli"
+line_text = "Thank you for your help. "
+
+[sub_resource type="Resource" id="Resource_nhp88"]
+script = ExtResource("2_agxhr")
+said_by = "Sam"
+line_text = "Sure. "
+
+[sub_resource type="Resource" id="Resource_xrcp2"]
+script = ExtResource("2_agxhr")
+said_by = "Eli"
+line_text = "And see ya. "
+
+[sub_resource type="Resource" id="Resource_j6m2h"]
+script = ExtResource("2_agxhr")
+said_by = "Sam"
+line_text = "See ya. I'll miss you anyway."
+
+[node name="GoodOutro" instance=ExtResource("1_dnr2x")]
+lines = Array[ExtResource("2_agxhr")]([SubResource("Resource_l6aew"), SubResource("Resource_xxmyy"), SubResource("Resource_llscu"), SubResource("Resource_07mo1"), SubResource("Resource_b1wda"), SubResource("Resource_nhp88"), SubResource("Resource_xrcp2"), SubResource("Resource_j6m2h")])
+next_scene = ExtResource("2_8uw8f")
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_rkw0c")
+
+[node name="LineLabel" parent="." index="1"]
+custom_minimum_size = Vector2(1000, 0)
+anchors_preset = 4
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 100.0
+offset_right = 1100.0
+grow_horizontal = 1
+
+[node name="SaidByLabel" parent="." index="2"]
+custom_minimum_size = Vector2(1000, 0)
+anchors_preset = 4
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 100.0
+offset_top = -280.0
+offset_right = 1100.0
+offset_bottom = -7.0
+grow_horizontal = 1

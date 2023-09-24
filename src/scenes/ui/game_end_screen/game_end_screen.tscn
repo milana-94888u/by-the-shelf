@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://bedwthkwrror3"]
+
+[ext_resource type="Script" path="res://src/scenes/ui/game_end_screen/game_end_screen.gd" id="1_ptwo8"]
+[ext_resource type="PackedScene" uid="uid://dtlxps4jnun7t" path="res://src/scenes/ui/game_start_screen/game_start_screen.tscn" id="2_nldix"]
+
+[sub_resource type="Theme" id="Theme_if0r7"]
+default_font_size = 64
+Label/colors/font_outline_color = Color(0.219608, 0.219608, 0.219608, 1)
+Label/constants/outline_size = 10
+
+[node name="GameEndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_if0r7")
+script = ExtResource("1_ptwo8")
+start_scene = ExtResource("2_nldix")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.556863, 0.823529, 0.901961, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -95.5
+offset_right = 284.0
+offset_bottom = 95.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "The game finished"
+
+[node name="RestartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Restart"
+
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]

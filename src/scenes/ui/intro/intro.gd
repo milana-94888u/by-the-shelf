@@ -1,25 +1,22 @@
 extends Control
 
 
-@onready var labels_row: Array[Label] = [
-	$FirstLabel as Label, $SecondLabel as Label, $ThirdLabel as Label
-]
-
-
+@export var lines: Array[IntroDialogLine]
 @export var next_scene: PackedScene
 
+@onready var line_label := $LineLabel
+@onready var said_by_label := $SaidByLabel
 
-var current_label := 0
+var current_line := 0
 
 
 func move_line() -> void:
-	for label in labels_row:
-		label.hide()
-	if current_label < labels_row.size():
-		labels_row[current_label].show()
+	if current_line < lines.size():
+		line_label.text = lines[current_line].line_text
+		said_by_label.text = lines[current_line].said_by
 	else:
 		get_tree().change_scene_to_packed(next_scene)
-	current_label += 1
+	current_line += 1
 
 
 func _ready() -> void:

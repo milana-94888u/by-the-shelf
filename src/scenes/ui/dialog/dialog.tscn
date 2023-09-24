@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.558594, 0.824219, 0.902344, 1)
+color = Color(0.556863, 0.823529, 0.901961, 1)
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
 layout_mode = 1
@@ -34,13 +34,13 @@ split_offset = 1200
 [node name="DialogSide" type="MarginContainer" parent="HSplitContainer"]
 layout_mode = 2
 
-[node name="DialogBox" type="VSplitContainer" parent="HSplitContainer/DialogSide"]
+[node name="DialogBox" type="VBoxContainer" parent="HSplitContainer/DialogSide"]
 custom_minimum_size = Vector2(0, 720)
 layout_mode = 2
 size_flags_vertical = 8
-split_offset = 400
 
 [node name="DialogPanel" type="Panel" parent="HSplitContainer/DialogSide/DialogBox"]
+custom_minimum_size = Vector2(0, 460)
 layout_mode = 2
 mouse_filter = 1
 

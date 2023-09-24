@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8k3i2iaheo0j"]
+
+[ext_resource type="PackedScene" uid="uid://bnlyem2f48sv2" path="res://src/scenes/ui/outro/good_outro.tscn" id="1_y2mwc"]
+[ext_resource type="Texture2D" uid="uid://c61hsfrkpc8qn" path="res://assets/sprites/endings/bad ending.png" id="2_q0mwn"]
+
+[node name="BadOutro" instance=ExtResource("1_y2mwc")]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_q0mwn")
+
+[node name="LineLabel" parent="." index="1"]
+offset_left = 1200.0
+offset_right = 2200.0
+
+[node name="SaidByLabel" parent="." index="2"]
+offset_left = 1200.0
+offset_right = 2200.0
