@@ -54,4 +54,6 @@ func _on_dialog_dialog_finished(is_item_taken: bool) -> void:
 	sprite.visible = not is_item_taken
 	ItemsSelectionManager.remove_active_item(self)
 	RelationshipManager.unregister_item(self)
-	dialog.hide()
+	var tween := get_tree().create_tween()
+	tween.tween_property(dialog, "modulate", Color.TRANSPARENT, 0.15)
+	tween.tween_callback(dialog.hide)

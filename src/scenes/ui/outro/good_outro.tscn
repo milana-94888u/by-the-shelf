@@ -52,7 +52,10 @@ next_scene = ExtResource("2_8uw8f")
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_rkw0c")
 
-[node name="LineLabel" parent="." index="1"]
+[node name="Panel" parent="." index="1"]
+visible = false
+
+[node name="LineLabel" parent="." index="2"]
 custom_minimum_size = Vector2(1000, 0)
 anchors_preset = 4
 anchor_left = 0.0
@@ -61,7 +64,7 @@ offset_left = 100.0
 offset_right = 1100.0
 grow_horizontal = 1
 
-[node name="SaidByLabel" parent="." index="2"]
+[node name="SaidByLabel" parent="." index="3"]
 custom_minimum_size = Vector2(1000, 0)
 anchors_preset = 4
 anchor_left = 0.0

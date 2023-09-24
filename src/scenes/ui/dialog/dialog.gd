@@ -41,6 +41,7 @@ var dialog_stack: Array[DialogLinesRow]
 
 func show_dialog(dialog: ItemDialog, item_data: ItemData) -> void:
 	show()
+	modulate = Color.WHITE
 	dialog_stack.push_back(DialogLinesRow.new(dialog.lines))
 	item_name_label.text = item_data.item_name
 	if item_data.item_closeup_texture:

@@ -5,7 +5,7 @@
 
 [sub_resource type="Theme" id="Theme_if0r7"]
 default_font_size = 64
-Label/colors/font_outline_color = Color(0.219608, 0.219608, 0.219608, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/constants/outline_size = 10
 
 [node name="GameEndScreen" type="Control"]
@@ -29,6 +29,7 @@ grow_vertical = 2
 color = Color(0.556863, 0.823529, 0.901961, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 600)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -41,14 +42,35 @@ offset_right = 284.0
 offset_bottom = 95.5
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1900, 0)
 layout_mode = 2
-text = "The game finished"
+size_flags_vertical = 0
+text = "You managed the changes poorly.
+You still talk sometimes, but it feels like something changed."
+horizontal_alignment = 1
 
-[node name="RestartButton" type="Button" parent="VBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RestartButton" type="Button" parent="VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -96.0
+offset_right = 116.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
 mouse_default_cursor_shape = 2
 text = "Restart"
 
-[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Control/RestartButton" to="." method="_on_restart_button_pressed"]

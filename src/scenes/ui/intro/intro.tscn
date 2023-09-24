@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ccftig6hopdso"]
+[gd_scene load_steps=12 format=3 uid="uid://ccftig6hopdso"]
 
 [ext_resource type="Script" path="res://src/scenes/ui/intro/intro.gd" id="1_0ibgg"]
 [ext_resource type="Script" path="res://src/resources/intro_dialog_line.gd" id="2_acxdw"]
@@ -9,21 +9,12 @@
 content_margin_left = 12.0
 content_margin_right = 12.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w02rq"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 20
-border_width_top = 20
-border_width_right = 20
-border_width_bottom = 20
-border_color = Color(0, 0, 0, 1)
-
 [sub_resource type="Theme" id="Theme_4uypa"]
 default_font_size = 64
-Label/colors/font_color = Color(0, 0, 0, 1)
-Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/constants/outline_size = 10
 Label/styles/normal = SubResource("StyleBoxEmpty_0s35v")
-Panel/styles/panel = SubResource("StyleBoxFlat_w02rq")
 
 [sub_resource type="Resource" id="Resource_sc2r6"]
 script = ExtResource("2_acxdw")
@@ -70,6 +61,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_ceqah")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 497.0
+offset_right = 1890.0
+offset_bottom = 844.0
 
 [node name="LineLabel" type="Label" parent="."]
 custom_minimum_size = Vector2(1440, 0)

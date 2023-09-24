@@ -8,10 +8,10 @@
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_q0mwn")
 
-[node name="LineLabel" parent="." index="1"]
+[node name="LineLabel" parent="." index="2"]
 offset_left = 1200.0
 offset_right = 2200.0
 
-[node name="SaidByLabel" parent="." index="2"]
+[node name="SaidByLabel" parent="." index="3"]
 offset_left = 1200.0
 offset_right = 2200.0
